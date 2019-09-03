@@ -14,7 +14,9 @@ using UnityEngine;
  **/
 public class GravityFieldControl : MonoBehaviour
 {
-    bool hitCeiling;
+     public string playerTag = "Player";
+
+    private string ceilingTag = "Ceiling";
 
     [Header("Attributes")]
     public float floatSpeed;
@@ -22,26 +24,24 @@ public class GravityFieldControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hitCeiling = false;
         GetComponent<Rigidbody2D>().velocity = floatSpeed * Vector3.up;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        //go up
- 
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        //check if player
-        //if so, pop!
-        //TO DO: give points to the corresponding player
+        //stops bubble if it hits the ceiling
+        if (collision.gameObject.CompareTag(ceilingTag))
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }
+        else
+        {
+            if (collision.gameObject.CompareTag(playerTag))
+            {
+                //check if player
+                //if so, pop!
+                Destroy(gameObject);
+            }
+        }
     }
 }
