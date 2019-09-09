@@ -210,7 +210,11 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< HEAD
   m_WasSpriteAssigned: 1
+=======
+  m_WasSpriteAssigned: 0
+>>>>>>> master
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &96510183
@@ -310,6 +314,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &640555770
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +459,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> master
 --- !u!1 &1017819845
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +525,11 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< HEAD
   m_WasSpriteAssigned: 1
+=======
+  m_WasSpriteAssigned: 0
+>>>>>>> master
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1017819847
@@ -561,6 +572,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!1 &1188233337
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +738,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> master
 --- !u!1 &1485589004
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +752,10 @@ GameObject:
   - component: {fileID: 1485589006}
   - component: {fileID: 1485589005}
   - component: {fileID: 1485589008}
+<<<<<<< HEAD
   - component: {fileID: 1485589009}
+=======
+>>>>>>> master
   m_Layer: 0
   m_Name: tempPlayer
   m_TagString: Player
@@ -766,7 +783,11 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+<<<<<<< HEAD
   m_Constraints: 4
+=======
+  m_Constraints: 0
+>>>>>>> master
 --- !u!212 &1485589006
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -813,7 +834,11 @@ SpriteRenderer:
   m_Size: {x: 0.9, y: 0.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< HEAD
   m_WasSpriteAssigned: 1
+=======
+  m_WasSpriteAssigned: 0
+>>>>>>> master
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1485589007
@@ -828,7 +853,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1.643, z: 1}
   m_Children:
   - {fileID: 1941984958}
+<<<<<<< HEAD
   - {fileID: 1188233338}
+=======
+>>>>>>> master
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -858,6 +886,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!114 &1485589009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,6 +1105,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5175972, y: 0.3403017}
   m_EdgeRadius: 0
+=======
+>>>>>>> master
 --- !u!1 &1746444488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1119,10 @@ GameObject:
   - component: {fileID: 1746444489}
   - component: {fileID: 1746444492}
   - component: {fileID: 1746444491}
+<<<<<<< HEAD
   - component: {fileID: 1746444493}
+=======
+>>>>>>> master
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
@@ -1142,7 +1176,11 @@ SpriteRenderer:
   m_Size: {x: 0.9, y: 0.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< HEAD
   m_WasSpriteAssigned: 1
+=======
+  m_WasSpriteAssigned: 0
+>>>>>>> master
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1746444490
@@ -1206,6 +1244,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!114 &1746444493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,6 +1259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fieldWithMonster: {fileID: 4338907542067220462, guid: 7f9e78e0fc515654a91f49fc50ad6159,
     type: 3}
+=======
+>>>>>>> master
 --- !u!1 &1941984957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1339,11 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< HEAD
   m_WasSpriteAssigned: 1
+=======
+  m_WasSpriteAssigned: 0
+>>>>>>> master
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1941984960
@@ -1314,7 +1359,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+<<<<<<< HEAD
   spawnDist: 0.5
+=======
+  spawnDist: 1
+>>>>>>> master
   controls:
     shoot: 32
   gravityFieldPrefab: {fileID: 7321630080110096858, guid: 7d30461a85020af41ae2b3e014223675,
