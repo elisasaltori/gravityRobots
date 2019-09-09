@@ -10,6 +10,19 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 20;
     public float jumpForce = 500;
     public bool facingRight = true;
+
+    [System.Serializable]
+    public struct Controls
+    {
+        public KeyCode up;
+        public KeyCode down;
+        public KeyCode right;
+        public KeyCode left;
+    }
+
+    [Header("Controls")]
+    public Controls controls;
+
     public LayerMask isGround;
 
 
@@ -17,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sr;
     private Animator animator;
 
+    
     private float horizontalMove;
     private float verticalMove;
 
@@ -42,8 +56,26 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal");
-        verticalMove = Input.GetAxisRaw("Vertical");
+        //horizontalMove = Input.GetAxisRaw("Horizontal");
+        if (Input.GetKey(controls.right))
+        {
+            horizontalMove = 1;
+        } else if (Input.GetKey(controls.left))
+        {
+            horizontalMove = -1;
+        } else
+        {
+            horizontalMove = 0;
+        }
+
+        //verticalMove = Input.GetAxisRaw("Vertical");
+        if (Input.GetKey(controls.up))
+        {
+            verticalMove = 1;
+        } else
+        {
+            verticalMove = 0;
+        }
     }
 
     // Used for physics, fixed intervals
