@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - GravityWithMonster
+  - Ceiling
   layers:
   - Default
   - TransparentFX
