@@ -16,7 +16,7 @@ public class GravityFieldControl : MonoBehaviour
 {
      public string playerTag = "Player";
 
-    private string ceilingTag = "Ceiling";
+    private string ceilingTag = "platform";
 
     [Header("Attributes")]
     public float floatSpeed;
