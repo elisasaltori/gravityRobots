@@ -1,0 +1,47 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+[RequireComponent(typeof(Collider2D))]
+/**
+ * Behavior of the gravity field after it hits an enemy:
+ * -floats up
+ * -can be popped by player
+ * 
+ * TO DO:
+ * -random chance for a cog to fall
+ **/
+public class GravityFieldControl : MonoBehaviour
+{
+     public string playerTag = "Player";
+
+    private string ceilingTag = "Ceiling";
+
+    [Header("Attributes")]
+    public float floatSpeed;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        GetComponent<Rigidbody2D>().velocity = floatSpeed * Vector3.up;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //stops bubble if it hits the ceiling
+        if (collision.gameObject.CompareTag(ceilingTag))
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }
+        else
+        {
+            if (collision.gameObject.CompareTag(playerTag))
+            {
+                //check if player
+                //if so, pop!
+                Destroy(gameObject);
+            }
+        }
+    }
+}
