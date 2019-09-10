@@ -59,7 +59,7 @@ public class MonstroSimplesController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-    	if(other.gameObject.tag == "parede"){
+    	if(other.gameObject.tag == "parede" || other.gameObject.tag == "Player"){
         	Debug.Log("Ocorreu contato com a parede");
         	changeDirection();
         }
