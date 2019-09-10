@@ -8,6 +8,7 @@ public class MonstroSimplesController : MonoBehaviour
 
 
     public int direction = -1;
+
     // Start is called before the first frame update
     void Start()
     {
