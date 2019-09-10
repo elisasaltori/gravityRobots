@@ -325,7 +325,7 @@ PrefabInstance:
     - target: {fileID: 1752606960895828595, guid: 801cf8c037a929542a1803354079698e,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 75787183938742325, guid: 801cf8c037a929542a1803354079698e,
         type: 3}
@@ -395,6 +395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RedRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266682091939401988, guid: 0e5d914f3440d4e4c9e75cff48279f56,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1266682091939401987, guid: 0e5d914f3440d4e4c9e75cff48279f56,
         type: 3}
@@ -500,7 +505,7 @@ PrefabInstance:
     - target: {fileID: 1752606960895828595, guid: 801cf8c037a929542a1803354079698e,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 75787183938742325, guid: 801cf8c037a929542a1803354079698e,
         type: 3}
@@ -639,7 +644,7 @@ GameObject:
   - component: {fileID: 1341218545}
   - component: {fileID: 1341218544}
   - component: {fileID: 1341218543}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,6 +858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: YellowRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5079216284774997831, guid: 5fda779ac1ec2ba45aca1ad3e1aaee5d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5079216284774997824, guid: 5fda779ac1ec2ba45aca1ad3e1aaee5d,
         type: 3}
