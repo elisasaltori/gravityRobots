@@ -60,6 +60,7 @@ public class Shoot : MonoBehaviour
         }
 
         GameObject bullet = Instantiate(bomb);
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), bullet.GetComponent<Collider2D>());
         bullet.transform.position = (this.transform.position + transform.right * (dir *spawnDist));
         bullet.GetComponent<Rigidbody2D>().velocity = dir * (speed * transform.right);
     }
