@@ -363,67 +363,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956505, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956505, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956507, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956507, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 21.789934
-      objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956507, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 12.687382
-      objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956507, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -1.1712294
-      objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956507, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.7437122
-      objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956507, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 26.008446
-      objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956507, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 15.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956506, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 092a83ee3b1d0084991edc71700052e0,
-        type: 3}
-    - target: {fileID: 5946287612370956486, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 26.008446
-      objectReference: {fileID: 0}
-    - target: {fileID: 5946287612370956486, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 15.76
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29f6646930b4cfb43ab8c67f74a88c9a, type: 3}
 --- !u!1 &519420028
@@ -1132,45 +1071,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1836618049 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5946287612370956509, guid: 29f6646930b4cfb43ab8c67f74a88c9a,
-    type: 3}
-  m_PrefabInstance: {fileID: 417895956}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1836618056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1836618049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eccb58675f314554c81c3189dc5fd6fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fieldWithMonster: {fileID: 4338907542067220462, guid: 7f9e78e0fc515654a91f49fc50ad6159,
-    type: 3}
---- !u!95 &1836618057
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1836618049}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cd9cbbb924f6f4149afe551e351bba5a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1929310144
 PrefabInstance:
   m_ObjectHideFlags: 0

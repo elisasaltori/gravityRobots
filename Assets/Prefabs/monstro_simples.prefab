@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 5946287612370956508}
   - component: {fileID: 5946287612370956504}
   - component: {fileID: 5946287612370956486}
-  - component: {fileID: 5811491260391131653}
   - component: {fileID: -1059093447354692912}
+  - component: {fileID: 1836618057}
+  - component: {fileID: 1836618056}
   m_Layer: 10
   m_Name: monstro_simples
   m_TagString: Enemy
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 5946287612370956509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.97, y: 3, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.06, y: 0.06, z: 0.05}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 100fbed894a8a2343a9b5327c8bd1d93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 092a83ee3b1d0084991edc71700052e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,18 +100,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01351428, y: 0}
+  m_Offset: {x: -1.1712294, y: -0.7437122}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 32.64, y: 24.479998}
+    oldSize: {x: 26.008446, y: 15.76}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7747607, y: 1}
+  m_Size: {x: 21.029846, y: 12.687382}
   m_EdgeRadius: 0
 --- !u!50 &5946287612370956508
 Rigidbody2D:
@@ -160,46 +161,53 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.01808846}
+  m_Offset: {x: -1.1621943, y: -0.73039865}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 32.64, y: 24.479998}
+    oldSize: {x: 26.008446, y: 15.76}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.73615384}
+  m_Size: {x: 21.827948, y: 11.790342}
   m_EdgeRadius: 0
---- !u!61 &5811491260391131653
-BoxCollider2D:
+--- !u!114 &-1059093447354692912
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5946287612370956509}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &-1059093447354692912
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eccb58675f314554c81c3189dc5fd6fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fieldWithMonster: {fileID: 4338907542067220462, guid: 7f9e78e0fc515654a91f49fc50ad6159,
+    type: 3}
+--- !u!95 &1836618057
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946287612370956509}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd9cbbb924f6f4149afe551e351bba5a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1836618056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
