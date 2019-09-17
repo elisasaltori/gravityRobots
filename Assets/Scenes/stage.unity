@@ -1858,5 +1858,53 @@ PrefabInstance:
       propertyPath: m_SurfaceArc
       value: 170
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9188068318749000033, guid: 0877949b0bb7b1b48b9746a48c22c9e4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828117264826574133, guid: 0877949b0bb7b1b48b9746a48c22c9e4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188068319514616339, guid: 0877949b0bb7b1b48b9746a48c22c9e4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828117263477196359, guid: 0877949b0bb7b1b48b9746a48c22c9e4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188068319685944394, guid: 0877949b0bb7b1b48b9746a48c22c9e4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828117263382183966, guid: 0877949b0bb7b1b48b9746a48c22c9e4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188068319708538264, guid: 0877949b0bb7b1b48b9746a48c22c9e4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828117263669936588, guid: 0877949b0bb7b1b48b9746a48c22c9e4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9188068319685944394, guid: 0877949b0bb7b1b48b9746a48c22c9e4, type: 3}
+    - {fileID: 9188068319514616339, guid: 0877949b0bb7b1b48b9746a48c22c9e4, type: 3}
+    - {fileID: 9188068319708538264, guid: 0877949b0bb7b1b48b9746a48c22c9e4, type: 3}
+    - {fileID: 9188068318749000033, guid: 0877949b0bb7b1b48b9746a48c22c9e4, type: 3}
+    - {fileID: 7828117263382183966, guid: 0877949b0bb7b1b48b9746a48c22c9e4, type: 3}
+    - {fileID: 7828117263477196359, guid: 0877949b0bb7b1b48b9746a48c22c9e4, type: 3}
+    - {fileID: 7828117263669936588, guid: 0877949b0bb7b1b48b9746a48c22c9e4, type: 3}
+    - {fileID: 7828117264826574133, guid: 0877949b0bb7b1b48b9746a48c22c9e4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0877949b0bb7b1b48b9746a48c22c9e4, type: 3}
