@@ -1012,7 +1012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341218542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3583231, y: -5.11, z: 0}
+  m_LocalPosition: {x: 0.3583231, y: -4.98, z: 0}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 1461251133}
   - component: {fileID: 1461251132}
   - component: {fileID: 1461251131}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: ceiling
   m_TagString: platform
   m_Icon: {fileID: 0}
@@ -1119,7 +1119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461251130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3583231, y: 4.83, z: 0}
+  m_LocalPosition: {x: 0.3583231, y: 4.96, z: 0}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
