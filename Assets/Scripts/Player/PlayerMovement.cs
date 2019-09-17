@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public Controls controls;
 
     public LayerMask isGround;
+    private int layerMask = ~(1 << 8); //all layers but layer 8 (Player)
 
 
     private Rigidbody2D rb;
@@ -124,9 +125,10 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 position = transform.position;
         Vector2 direction = Vector2.down;
-        float distance = 1.25f;
+        float distance = 1.15f;
 
-        RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, isGround);
+        //raycast ignores player layer due to layerMask
+        RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, layerMask);
         if (hit.collider != null && rb.velocity.y == 0)
         {
             return true;
