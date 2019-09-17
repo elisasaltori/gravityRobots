@@ -58,12 +58,10 @@ public class MonstroSimplesController : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = new Vector2(direction * speed, vect.y);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-    	if(other.gameObject.tag == "parede" || other.gameObject.tag == "Player"){
-        	Debug.Log("Ocorreu contato com a parede");
-        	changeDirection();
-        }
+        changeDirection();
+        
     }
 
     /*int OnTriggerEnter2D(Collider2D other)
