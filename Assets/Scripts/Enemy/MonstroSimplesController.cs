@@ -13,7 +13,7 @@ public class MonstroSimplesController : MonoBehaviour
     void Start()
     {
  
-
+        flipSprite();
         Vector2 vect = GetComponent<Rigidbody2D>().velocity;
         GetComponent<Rigidbody2D>().velocity = new Vector2(direction * speed, vect.y);
         //Collider2D = collider;
@@ -49,10 +49,18 @@ public class MonstroSimplesController : MonoBehaviour
     	return this.direction;
     }
 
-   
+    // Inverte no eixo-x o sprite
+    void flipSprite()
+    {
+        //facingRight = !facingRight;
+        Vector2 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
 
     public void changeDirection()
     {
+        flipSprite();
         this.direction = this.direction * (-1);
         Vector2 vect = GetComponent<Rigidbody2D>().velocity;
         GetComponent<Rigidbody2D>().velocity = new Vector2(direction * speed, vect.y);
