@@ -13,6 +13,7 @@ public class BulletControl : MonoBehaviour
     [Header("Attributes")]
     public float range = 10f;
     public bool isPlayerBullet;
+    public bool isPlayerOne;
     public string enemyTag = null; //should remain null if enemy bullet
     public string playerTag = null; //always should have the Player tag
     public string fieldTag = null; //fields with monsters tag so bubble can ignore them
@@ -52,7 +53,7 @@ public class BulletControl : MonoBehaviour
             {
                 Debug.Log("hit an enemy!");
                 //
-                collision.gameObject.GetComponent<EnemyBubbleControl>().EnemyHit();
+                collision.gameObject.GetComponent<EnemyBubbleControl>().EnemyHit(isPlayerOne);
 
 
             }

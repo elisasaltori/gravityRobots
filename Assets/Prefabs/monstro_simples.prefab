@@ -186,7 +186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eccb58675f314554c81c3189dc5fd6fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fieldWithMonster: {fileID: 4338907542067220462, guid: 7f9e78e0fc515654a91f49fc50ad6159,
+  fieldWithMonsteRed: {fileID: 3753784629856853367, guid: f7ad59c84b924d74fbe4cce6ba1e855c,
+    type: 3}
+  fieldWithMonsterYellow: {fileID: 4338907542067220462, guid: 7f9e78e0fc515654a91f49fc50ad6159,
     type: 3}
 --- !u!95 &1836618057
 Animator:
@@ -219,5 +221,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eccb58675f314554c81c3189dc5fd6fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fieldWithMonster: {fileID: 4338907542067220462, guid: 7f9e78e0fc515654a91f49fc50ad6159,
-    type: 3}
+  fieldWithMonsteRed: {fileID: 0}
+  fieldWithMonsterYellow: {fileID: 0}
