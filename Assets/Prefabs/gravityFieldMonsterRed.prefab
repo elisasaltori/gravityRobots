@@ -134,3 +134,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Player
   floatSpeed: 2
+  popPoints: 10
