@@ -18,12 +18,14 @@ public class BulletControl : MonoBehaviour
     public string playerTag = null; //always should have the Player tag
     public string fieldTag = null; //fields with monsters tag so bubble can ignore them
 
+    private bool isColliding;
     //used for checking if range has been reached
     private Vector3 spawnLocation;
 
     // Start is called before the first frame update
     void Start()
     {
+        isColliding = false;
         spawnLocation = transform.position;
     }
 
@@ -32,6 +34,7 @@ public class BulletControl : MonoBehaviour
     {
         //destroys itself if range is reached
         ShotDistance();
+        isColliding = false;
     }
 
     //Destroy bullet if it has travelled over the range distance
@@ -45,6 +48,11 @@ public class BulletControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isColliding)
+            return;
+
+        isColliding = true;
+
         //ignores trigger if it's a floating field (filled with a monster)
         if (fieldTag == null || !collision.gameObject.CompareTag(fieldTag))
         {
