@@ -38,5 +38,20 @@ public class PointsSystem : MonoBehaviour
         return p2Points;
     }
 
+    public string GetMatchResult()
+    {
+        if (p1Points > p2Points)
+        {
+            return ("P1");
+        }
+        else
+        {
+            if (p2Points > p1Points)
+                return ("P2");
+            else
+                return ("DRAW");
+        }
+            
 
+    }
 }
