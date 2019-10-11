@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/***
+ * Gets final score and sets win screen parameters to match result
+ **/
 public class PlayerWinController : MonoBehaviour
 {
 

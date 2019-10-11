@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6593834}
   - component: {fileID: 6593833}
+  - component: {fileID: 6593835}
   m_Layer: 0
   m_Name: force-field-transparent-red
   m_TagString: Untagged
@@ -200,6 +201,19 @@ Transform:
   m_Father: {fileID: 786074471}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6593835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01677b775659a2d4e8b68ea4d6285bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
 --- !u!1 &59679229
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59679230}
   - component: {fileID: 59679231}
+  - component: {fileID: 59679232}
   m_Layer: 0
   m_Name: RedDead_Lose (1)
   m_TagString: Untagged
@@ -280,6 +295,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &59679232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59679229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01677b775659a2d4e8b68ea4d6285bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
 --- !u!1 &141747534
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 406317174}
   - component: {fileID: 406317173}
+  - component: {fileID: 406317176}
   m_Layer: 0
   m_Name: RedRunShoot (4)
   m_TagString: Untagged
@@ -518,6 +547,25 @@ Transform:
   m_Father: {fileID: 786074471}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &406317176
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406317172}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c9c8cde1aabf78943a3fd7d3cbcc3ae7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &563677213
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 668869378}
   - component: {fileID: 668869379}
+  - component: {fileID: 668869380}
   m_Layer: 0
   m_Name: Yellow_Dead_Lose (1)
   m_TagString: Untagged
@@ -697,6 +746,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &668869380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668869377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01677b775659a2d4e8b68ea4d6285bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
 --- !u!1 &709523985
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &786074471
 Transform:
   m_ObjectHideFlags: 0
@@ -886,6 +948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 805536340}
   - component: {fileID: 805536341}
+  - component: {fileID: 805536342}
   m_Layer: 0
   m_Name: force-field-transparent-yellow
   m_TagString: Untagged
@@ -956,6 +1019,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &805536342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805536339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01677b775659a2d4e8b68ea4d6285bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
 --- !u!1 &818916052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,6 +1122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848956929}
   - component: {fileID: 848956928}
+  - component: {fileID: 848956930}
   m_Layer: 0
   m_Name: RedDead_Lose
   m_TagString: Untagged
@@ -1116,6 +1193,19 @@ Transform:
   m_Father: {fileID: 628522070}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848956930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848956927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01677b775659a2d4e8b68ea4d6285bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
 --- !u!1 &952782253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,6 +1318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035319505}
   - component: {fileID: 1035319506}
+  - component: {fileID: 1035319507}
   m_Layer: 0
   m_Name: force-field-transparent-red (1)
   m_TagString: Untagged
@@ -1298,6 +1389,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1035319507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035319504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01677b775659a2d4e8b68ea4d6285bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
 --- !u!1 &1092643842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,6 +1412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1092643843}
   - component: {fileID: 1092643844}
+  - component: {fileID: 1092643845}
   m_Layer: 0
   m_Name: force-field-transparent-yellow (1)
   m_TagString: Untagged
@@ -1378,6 +1483,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1092643845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092643842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01677b775659a2d4e8b68ea4d6285bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
 --- !u!1 &1243899233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,6 +1506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1243899235}
   - component: {fileID: 1243899234}
+  - component: {fileID: 1243899236}
   m_Layer: 0
   m_Name: Yellow_Dead_Lose
   m_TagString: Untagged
@@ -1458,6 +1577,19 @@ Transform:
   m_Father: {fileID: 786074471}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243899236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243899233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01677b775659a2d4e8b68ea4d6285bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
 --- !u!1 &1285874919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,6 +1679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1566748504}
   - component: {fileID: 1566748505}
+  - component: {fileID: 1566748506}
   m_Layer: 0
   m_Name: Yellow_RunShoot (8)
   m_TagString: Untagged
@@ -1617,6 +1750,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1566748506
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566748503}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18fb20ea682c5414faaa29ecaf5b57b1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1632567546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,7 +1867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1688717479
 Transform:
   m_ObjectHideFlags: 0
@@ -1921,7 +2073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a105479e59d544d9fe2ffd2e433bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ps: {fileID: 0}
   p1Win: {fileID: 628522069}
   p2Win: {fileID: 786074470}
   draw: {fileID: 1688717478}

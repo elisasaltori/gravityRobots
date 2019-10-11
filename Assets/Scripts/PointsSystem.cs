@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * Keeps track of players points in game
+ **/
 public class PointsSystem : MonoBehaviour
 {
 
@@ -18,7 +21,9 @@ public class PointsSystem : MonoBehaviour
         DontDestroyOnLoad(this.gameObject); //so its not destroyed when score scene is loaded
     }
 
-
+    /**
+     * Public function to increase a player's score
+     **/
     public void AddPoints(bool isPlayerOne, int points)
     {
         if (isPlayerOne)
@@ -38,6 +43,10 @@ public class PointsSystem : MonoBehaviour
         return p2Points;
     }
 
+    /**
+     * Return string indicating the winner of a game:
+     * P1, P2, DRAW
+     **/
     public string GetMatchResult()
     {
         if (p1Points > p2Points)
