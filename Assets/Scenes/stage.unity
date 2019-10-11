@@ -2181,7 +2181,7 @@ PrefabInstance:
     - target: {fileID: 887795353303958666, guid: 252a980af3d03b843b848efd06e9d7ad,
         type: 3}
       propertyPath: timeStart
-      value: 180
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 252a980af3d03b843b848efd06e9d7ad, type: 3}

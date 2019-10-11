@@ -7,7 +7,7 @@ public class PlayerWinController : MonoBehaviour
 {
 
     [Header("References")]
-    public PointsSystem ps;
+    
     public GameObject p1Win;
     public GameObject p2Win;
     public GameObject draw;
@@ -15,13 +15,15 @@ public class PlayerWinController : MonoBehaviour
 
     string modelWinText = "MODELO SELECIONADO: ";
     string modelDrawText = "MODELOS EMPATADOS";
-    
+    PointsSystem ps;
+
     // Start is called before the first frame update
     void Start()
     {
+        ps = GameObject.Find("PointsSystem").GetComponent<PointsSystem>();
         //check who won
         string res = ps.GetMatchResult();
-
+        Debug.Log("match result: " + res);
 
         //disable/enable right images
         //change win text
