@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     
     private float horizontalMove;
     private float verticalMove;
+    public bool stunned = false;
 
     // Chamado antes de start
     private void Awake()
@@ -57,25 +58,28 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //horizontalMove = Input.GetAxisRaw("Horizontal");
-        if (Input.GetKey(controls.right))
+        if (!stunned)
         {
-            horizontalMove = 1;
-        } else if (Input.GetKey(controls.left))
-        {
-            horizontalMove = -1;
-        } else
-        {
-            horizontalMove = 0;
-        }
+            //horizontalMove = Input.GetAxisRaw("Horizontal");
+            if (Input.GetKey(controls.right))
+            {
+                horizontalMove = 1;
+            } else if (Input.GetKey(controls.left))
+            {
+                horizontalMove = -1;
+            } else
+            {
+                horizontalMove = 0;
+            }
 
-        //verticalMove = Input.GetAxisRaw("Vertical");
-        if (Input.GetKey(controls.up))
-        {
-            verticalMove = 1;
-        } else
-        {
-            verticalMove = 0;
+            //verticalMove = Input.GetAxisRaw("Vertical");
+            if (Input.GetKey(controls.up))
+            {
+                verticalMove = 1;
+            } else
+            {
+                verticalMove = 0;
+            }
         }
     }
 
@@ -135,5 +139,33 @@ public class PlayerMovement : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == "monstro_simples(Clone)")
+        {
+            //Destroy(collision.gameObject);
+            Stun();
+        }
+    }
+
+    private void Stun()
+    {
+        // rb.velocity = Vector2.zero;
+        //rb.sleepMode
+        stunned = true;
+        animator.SetBool("stunned", true);
+        horizontalMove = 0;
+        verticalMove = 0;
+        StartCoroutine(wait(2));
+        //stunned = false;
+    }
+
+    IEnumerator wait(int sec)
+    {
+        yield return new WaitForSeconds(sec);
+        animator.SetBool("stunned", false);
+        stunned = false;
     }
 }
