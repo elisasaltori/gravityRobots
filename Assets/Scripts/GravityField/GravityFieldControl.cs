@@ -20,6 +20,14 @@ public class GravityFieldControl : MonoBehaviour
 
     [Header("Attributes")]
     public float floatSpeed;
+    public int popPoints = 10; 
+
+    private PointsSystem ps;
+
+    private void Awake()
+    {
+        ps = GameObject.FindGameObjectWithTag("PointsManager").GetComponent<PointsSystem>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +47,10 @@ public class GravityFieldControl : MonoBehaviour
             if (collision.gameObject.CompareTag(playerTag))
             {
                 //check if player
-                //if so, pop!
+                //if so, add points to player then pop!
+                Debug.Log("Field popped!");
+                GetComponent<Collider2D>().enabled = false;
+                ps.AddPoints(collision.GetComponent<IsPlayerOne>().isPlayerOne, popPoints);
                 Destroy(gameObject);
             }
         }
