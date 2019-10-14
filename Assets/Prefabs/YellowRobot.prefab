@@ -144,7 +144,7 @@ MonoBehaviour:
   dir: 0
   controls:
     shoot: 32
-  bomb: {fileID: 7321630080110096858, guid: 7d30461a85020af41ae2b3e014223675, type: 3}
+  bomb: {fileID: 7070139135704615617, guid: 7b15a041d45633d429c3c80cdcfc7e34, type: 3}
 --- !u!50 &5079216284774997826
 Rigidbody2D:
   serializedVersion: 4
