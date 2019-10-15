@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3291349784304527443}
   - component: {fileID: 6560551443103014124}
   - component: {fileID: 3093084508402380962}
+  - component: {fileID: -4224861468598404602}
   m_Layer: 0
   m_Name: gravityFieldMonsterRed
   m_TagString: GravityWithMonster
@@ -135,3 +136,17 @@ MonoBehaviour:
   playerTag: Player
   floatSpeed: 2
   popPoints: 10
+--- !u!114 &-4224861468598404602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753784629856853367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba331b9f71f8b54095011e506f469d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropRate: 0.9
+  cog: {fileID: 1170926670697232403, guid: 4eff7f7e2b619f643b001a11d0f683e0, type: 3}

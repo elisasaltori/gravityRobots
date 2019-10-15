@@ -37,6 +37,8 @@ public class EnemyBubbleControl : MonoBehaviour
         //add points to player for killing the monster
         ps.AddPoints(isPlayerOne, killPoints);
 
+       
+
         //spawns filled field a little above monster so it doesnt get stuck to a platform
         field.transform.position = this.transform.position + new Vector3(0f, 0.1f, 0f); 
         Destroy(gameObject);
