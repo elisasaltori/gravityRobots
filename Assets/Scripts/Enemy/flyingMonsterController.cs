@@ -13,7 +13,7 @@ public class flyingMonsterController : MonoBehaviour
     void Start()
     {
  
-        flipSprite();
+        // flipSprite();
         Vector2 vect = GetComponent<Rigidbody2D>().velocity;
         GetComponent<Rigidbody2D>().velocity = new Vector2(vect.x, direction * speed);
         //Collider2D = collider;
@@ -60,7 +60,7 @@ public class flyingMonsterController : MonoBehaviour
 
     public void changeDirection()
     {
-        flipSprite();
+        // flipSprite();
         this.direction = this.direction * (-1);
         Vector2 vect = GetComponent<Rigidbody2D>().velocity;
         GetComponent<Rigidbody2D>().velocity = new Vector2(vect.x, direction * speed);
