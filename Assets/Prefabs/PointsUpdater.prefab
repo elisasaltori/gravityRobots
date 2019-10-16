@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5893773181557736000}
-  - component: {fileID: 1480607157065101883}
+  - component: {fileID: 3563026812104118634}
   m_Layer: 5
   m_Name: PointsUpdater
   m_TagString: Untagged
@@ -38,7 +38,7 @@ RectTransform:
   m_AnchoredPosition: {x: -250.00002, y: 210.1397}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1480607157065101883
+--- !u!114 &3563026812104118634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6815181647600326871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27e923f383113854baaf4c80c043422a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d1d49104a7dd784eba698bdae5fc462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   points1Text: {fileID: 8778682516580544748}

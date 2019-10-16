@@ -71,7 +71,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 12087
+    m_Bits: 28471
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -86,6 +86,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774395387924632150}
     m_Modifications:
+    - target: {fileID: 1752606960895828595, guid: 801cf8c037a929542a1803354079698e,
+        type: 3}
+      propertyPath: m_Name
+      value: platoff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752606960895828595, guid: 801cf8c037a929542a1803354079698e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 75787183938742325, guid: 801cf8c037a929542a1803354079698e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -141,16 +151,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1752606960895828595, guid: 801cf8c037a929542a1803354079698e,
-        type: 3}
-      propertyPath: m_Name
-      value: platoff
-      objectReference: {fileID: 0}
-    - target: {fileID: 1752606960895828595, guid: 801cf8c037a929542a1803354079698e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -8484257998522744216, guid: 801cf8c037a929542a1803354079698e, type: 3}
     - {fileID: -7394840131111213508, guid: 801cf8c037a929542a1803354079698e, type: 3}
@@ -168,6 +168,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774395387924632150}
     m_Modifications:
+    - target: {fileID: 1752606960895828595, guid: 801cf8c037a929542a1803354079698e,
+        type: 3}
+      propertyPath: m_Name
+      value: platoff (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752606960895828595, guid: 801cf8c037a929542a1803354079698e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 75787183938742325, guid: 801cf8c037a929542a1803354079698e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -222,16 +232,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1752606960895828595, guid: 801cf8c037a929542a1803354079698e,
-        type: 3}
-      propertyPath: m_Name
-      value: platoff (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1752606960895828595, guid: 801cf8c037a929542a1803354079698e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -8484257998522744216, guid: 801cf8c037a929542a1803354079698e, type: 3}
