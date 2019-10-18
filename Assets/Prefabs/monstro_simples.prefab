@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5946287612370956509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.97, y: 3, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 0.05}
+  m_LocalScale: {x: 1, y: 1, z: 0.05}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 092a83ee3b1d0084991edc71700052e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4856c7393177b27439bcd6b83a7b1212, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,18 +99,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.1712294, y: -0.7437122}
+  m_Offset: {x: -0.10760379, y: -0.05690849}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 26.008446, y: 15.76}
+    oldSize: {x: 1.89, y: 1.47}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.029846, y: 12.687382}
+  m_Size: {x: 1.3841476, y: 0.8123419}
   m_EdgeRadius: 0
 --- !u!50 &5946287612370956508
 Rigidbody2D:
@@ -126,7 +126,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -160,18 +160,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.1621943, y: -0.73039865}
+  m_Offset: {x: 0.006262183, y: 0.09884608}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 26.008446, y: 15.76}
+    oldSize: {x: 1.89, y: 1.47}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.827948, y: 11.790342}
+  m_Size: {x: 1.6889031, y: 0.9857452}
   m_EdgeRadius: 0
 --- !u!114 &-1059093447354692912
 MonoBehaviour:
@@ -200,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 5946287612370956509}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cd9cbbb924f6f4149afe551e351bba5a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f3339f206b2537428025374ba6d1d79, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
