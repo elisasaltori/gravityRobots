@@ -149,4 +149,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropRate: 0.9
+  cogZ: -2.1
   cog: {fileID: 6897206259993496013, guid: 958ec78d0012e1a4fbae90727fa78129, type: 3}
