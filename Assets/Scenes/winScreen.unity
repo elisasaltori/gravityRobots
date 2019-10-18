@@ -1496,6 +1496,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 0.5
+--- !u!114 &1213112566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8778682515600944136, guid: 35ff1c3a6778d284682af0e580a8c231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1909375595}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1243899233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,6 +1681,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285874919}
   m_CullTransparentMesh: 0
+--- !u!114 &1322306735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8778682516580544748, guid: 35ff1c3a6778d284682af0e580a8c231,
+    type: 3}
+  m_PrefabInstance: {fileID: 1909375595}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1566748503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,7 +2094,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1877995622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a105479e59d544d9fe2ffd2e433bb6, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e6773079d1a2e943aea5d79b54ecaf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   p1Win: {fileID: 628522069}
@@ -2273,6 +2297,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1480607157065101883, guid: 35ff1c3a6778d284682af0e580a8c231,
+        type: 3}
+      propertyPath: points1Text
+      value: 
+      objectReference: {fileID: 1322306735}
+    - target: {fileID: 1480607157065101883, guid: 35ff1c3a6778d284682af0e580a8c231,
+        type: 3}
+      propertyPath: points2Text
+      value: 
+      objectReference: {fileID: 1213112566}
     - target: {fileID: 8778682516580544748, guid: 35ff1c3a6778d284682af0e580a8c231,
         type: 3}
       propertyPath: m_Color.r
@@ -2303,7 +2337,8 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1480607157065101883, guid: 35ff1c3a6778d284682af0e580a8c231, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35ff1c3a6778d284682af0e580a8c231, type: 3}
 --- !u!224 &1909375596 stripped
 RectTransform:
