@@ -25,6 +25,7 @@ public class Shoot : MonoBehaviour
     public GameObject bomb;
 
     private bool facing;
+    private bool stunned;
 
     public void Awake()
     {
@@ -41,10 +42,14 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(controls.shoot))
+        stunned = gameObject.GetComponent<PlayerMovement>().stunned;
+        if (!stunned)
         {
-            animator.SetTrigger("shooting");
-            Shoots();
+            if (Input.GetKeyDown(controls.shoot))
+            {
+                animator.SetTrigger("shooting");
+                Shoots();
+            }
         }
     }
 
