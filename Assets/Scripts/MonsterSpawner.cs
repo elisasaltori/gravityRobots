@@ -5,8 +5,14 @@ using UnityEngine;
 public class MonsterSpawner : MonoBehaviour
 {
     [Header("References")]
-    public GameObject enemyPrefab;
     public Transform[] spawnPoints;
+    public GameObject[] enemyPrefabs;
+
+    [Header("Attributes")]
+    //monsters are spawned in a z interval so that they don't occupy the same space
+    //if that happens, the images glitch
+    public float zMinSpawn = 1.0f;
+    public float zMaxSpawn = 1.8f;
     
 
     public float spawnTime = 3f;
@@ -24,8 +30,17 @@ public class MonsterSpawner : MonoBehaviour
         // Find a random index between zero and one less than the number of spawn points.
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
 
+        //get enemy type
+        int enemyType = (int) Random.Range(0, enemyPrefabs.Length);
+
+        //get enemy z spawn position
+        float spawnZ = Random.Range(zMinSpawn, zMaxSpawn);
+
+        Vector3 pos = spawnPoints[spawnPointIndex].position;
+        pos.z = spawnZ;
+
         // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-        Instantiate(enemyPrefab, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        Instantiate(enemyPrefabs[enemyType], pos, spawnPoints[spawnPointIndex].rotation);
     }
 
 
