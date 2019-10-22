@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2046348025628244733}
   - component: {fileID: 2018004979282092878}
   - component: {fileID: -3707139546934243234}
+  - component: {fileID: -4097167533214210722}
+  - component: {fileID: 3464628229419820942}
   m_Layer: 12
   m_Name: monstro_voador
   m_TagString: Enemy
@@ -182,3 +184,30 @@ MonoBehaviour:
     type: 3}
   fieldWithMonsterYellow: {fileID: 3753784629856853367, guid: ef4a9b74801574243bdf821497b0d539,
     type: 3}
+--- !u!114 &-4097167533214210722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046348025628244610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d962b517f27f7a469473c5addc1be67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 400272968990254355, guid: 56ee8938caa30fa4998d7bb696c01fa7,
+    type: 3}
+  shootintRate: 2.5
+--- !u!114 &3464628229419820942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046348025628244610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7baf082ff2a560b4890ac838fad474f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

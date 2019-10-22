@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: -1059093447354692912}
   - component: {fileID: 8291203853136138317}
   - component: {fileID: 2241396126339870343}
+  - component: {fileID: -506256087826695992}
+  - component: {fileID: -3459062939490176354}
   m_Layer: 10
   m_Name: monstro_atirador
   m_TagString: Enemy
@@ -209,3 +211,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-506256087826695992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946287612370956509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d962b517f27f7a469473c5addc1be67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 442125353445664596, guid: 1919b9cd593df1e4186dd9bffa383260,
+    type: 3}
+  shootintRate: 2.5
+--- !u!114 &-3459062939490176354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946287612370956509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7baf082ff2a560b4890ac838fad474f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
