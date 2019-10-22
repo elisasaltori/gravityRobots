@@ -10,6 +10,7 @@ TagManager:
   - platform
   - parede
   - PointsManager
+  - flyingEnemy
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - FlyingEnemy
   - Item
   - IgnorePlayer
-  - 
+  - IgnoreMonster
   - 
   - 
   - 

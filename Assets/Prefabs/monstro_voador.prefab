@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -3707139546934243234}
   m_Layer: 12
   m_Name: monstro_voador
-  m_TagString: flyingEnemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,5 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPoints: 5
-  fieldWithMonsteRed: {fileID: 0}
-  fieldWithMonsterYellow: {fileID: 0}
+  fieldWithMonsteRed: {fileID: 3753784629856853367, guid: 4f47613f6226d8b41807ced6134ac4b2,
+    type: 3}
+  fieldWithMonsterYellow: {fileID: 3753784629856853367, guid: ef4a9b74801574243bdf821497b0d539,
+    type: 3}

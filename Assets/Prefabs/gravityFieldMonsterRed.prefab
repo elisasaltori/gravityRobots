@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6560551443103014124}
   - component: {fileID: 3093084508402380962}
   - component: {fileID: -4224861468598404602}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: gravityFieldMonsterRed
   m_TagString: GravityWithMonster
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 570bebfb3de6cda4ebd846d85c4cb048, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52b785c751ebfe54d9fde438dcbceb82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

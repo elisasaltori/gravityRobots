@@ -137,9 +137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPoints: 5
-  fieldWithMonsteRed: {fileID: 3753784629856853367, guid: f7ad59c84b924d74fbe4cce6ba1e855c,
+  fieldWithMonsteRed: {fileID: 3753784629856853367, guid: 2075fc433bc8dda4791e1dc99614e7b3,
     type: 3}
-  fieldWithMonsterYellow: {fileID: 4338907542067220462, guid: 7f9e78e0fc515654a91f49fc50ad6159,
+  fieldWithMonsterYellow: {fileID: 3753784629856853367, guid: 94bf235ea27244948a09469163764306,
     type: 3}
 --- !u!95 &8291203853136138317
 Animator:
