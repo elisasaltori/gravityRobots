@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Este codigo controla o movimento do jogador
+// Controls player movement
 public class PlayerMovement : MonoBehaviour
 {
     // Atributos
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     private float verticalMove;
     public bool stunned = false;
 
-    // Chamado antes de start
+    // Called before start
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!stunned)
         {
-            //horizontalMove = Input.GetAxisRaw("Horizontal");
+            
             if (Input.GetKey(controls.right))
             {
                 horizontalMove = 1;
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
                 horizontalMove = 0;
             }
 
-            //verticalMove = Input.GetAxisRaw("Vertical");
+            
             if (Input.GetKey(controls.up))
             {
                 verticalMove = 1;
@@ -88,9 +88,10 @@ public class PlayerMovement : MonoBehaviour
     {
 
         rb.AddForce(Vector2.right * horizontalMove * speed);
-        //Vector2 vect = rb.velocity;
-        //rb.velocity = new Vector2(horizontalMove * speed, vect.y);
+       
         animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+
+        //flips sprite to match movement
         if (horizontalMove > 0 && !facingRight)
         {
             flipSprite();
@@ -100,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
             flipSprite();
         }
 
-        // Se nao estiver no ar e existir movimento vertical, pula
+        // if the player is not in the air and there is vertical movement, player jumps
         if (verticalMove > 0 && isOnGround())
         {
             animator.SetTrigger("jumping");
@@ -108,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Inverte no eixo-x o sprite
+    // Flips sprite horizontally
     void flipSprite()
     {
         facingRight = !facingRight;
@@ -117,16 +118,10 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = scale;
     }
 
-    //Checa se esta "pisando"
+    //Checks if the sprite is in contact with the floor
     public bool isOnGround()
     {
-        //bool groundCheck = Physics2D.Raycast(new Vector2(transform.position.x,
-        // transform.position.y - height),
-        // -Vector2.up, rayCastLength);
-        //if (groundCheck) return true;
-        //if (rb.velocity.y == 0) return true;
-        //return false;
-
+ 
         Vector2 position = transform.position;
         Vector2 direction = Vector2.down;
         float distance = 1.15f;
@@ -145,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.name == "monstro_simples(Clone)")
         {
-            //Destroy(collision.gameObject);
+            //on collision with a monster, stun player
             Stun();
         }
     }

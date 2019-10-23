@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Rotates image at the given speed
 public class RotateImage : MonoBehaviour
 {
     public float rotationSpeed = 0.5f;

@@ -1126,6 +1126,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 774395387924632145, guid: 2267f2876b1199445856268d20c1e269,
+        type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 61239
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2267f2876b1199445856268d20c1e269, type: 3}
 --- !u!1 &1177226145

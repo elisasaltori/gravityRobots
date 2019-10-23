@@ -9,8 +9,6 @@ using UnityEngine;
  * -floats up
  * -can be popped by player
  * 
- * TO DO:
- * -random chance for a cog to fall
  **/
 public class GravityFieldControl : MonoBehaviour
 {

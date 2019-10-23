@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Drops a cog with a random chance
 public class DropCog : MonoBehaviour
 {
     [Header("Attributes")]
@@ -11,10 +12,6 @@ public class DropCog : MonoBehaviour
     [Header("References")]
     public GameObject cog;
 
-    IEnumerator waiter()
-    {
-        yield return new WaitForSeconds(1);
-    }
 
     public void Cog(Transform transform)
     {
@@ -25,7 +22,6 @@ public class DropCog : MonoBehaviour
             Vector3 pos = transform.position;
             pos = new Vector3(pos.x, pos.y-1f, cogZ);
             //drop cog
-           
             GameObject newCog = Instantiate(cog, pos, transform.rotation);
             
         }
