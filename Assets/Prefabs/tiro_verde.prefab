@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 400272968990254354}
   - component: {fileID: 4833885068146927342}
   - component: {fileID: 7659999292453431856}
-  - component: {fileID: 7648607585666314787}
   - component: {fileID: 2207275405299104780}
   m_Layer: 16
   m_Name: tiro_verde
@@ -131,20 +130,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7648607585666314787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400272968990254353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87bbecec64927a44fbe5a39fc0ca0479, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: {x: 10, y: 5}
-  direction: {x: 1, y: 0}
 --- !u!114 &2207275405299104780
 MonoBehaviour:
   m_ObjectHideFlags: 0

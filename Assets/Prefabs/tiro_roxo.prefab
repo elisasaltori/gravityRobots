@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 442125353445664599}
   - component: {fileID: 9133289119149280356}
   - component: {fileID: 1152598982582509504}
-  - component: {fileID: 8094153233566417316}
   - component: {fileID: -4245576497461194986}
   m_Layer: 16
   m_Name: tiro_roxo
@@ -131,20 +130,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8094153233566417316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442125353445664598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87bbecec64927a44fbe5a39fc0ca0479, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: {x: 10, y: 5}
-  direction: {x: -1, y: 0}
 --- !u!114 &-4245576497461194986
 MonoBehaviour:
   m_ObjectHideFlags: 0

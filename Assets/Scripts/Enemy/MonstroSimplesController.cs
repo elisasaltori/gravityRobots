@@ -5,9 +5,8 @@ using UnityEngine;
 public class MonstroSimplesController : MonoBehaviour
 {
 	public float speed = 3.0f;
-
-
     public int direction = -1;
+    public bool facingRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +51,7 @@ public class MonstroSimplesController : MonoBehaviour
     // Inverte no eixo-x o sprite
     void flipSprite()
     {
-        //facingRight = !facingRight;
+        facingRight = !facingRight;
         Vector2 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
