@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Gets points from PointsSystem and shows it on GUI
 public class PointsGUI : MonoBehaviour
 {
 

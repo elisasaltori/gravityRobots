@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/**
+ * Timer that constrols play time
+ * It also updates the GUI with the remaining time
+ **/
 public class Countdown : MonoBehaviour
 {
     [Header("Attributes")]
@@ -12,8 +16,7 @@ public class Countdown : MonoBehaviour
     public string endSceneName;
 
     [Header("References")]
-    public Text textBox;
-
+    public Text textBox; //timer on gui
 
 
     private AudioSource timerSound;
@@ -36,9 +39,12 @@ public class Countdown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //reduces timer and updates text
         time -= Time.deltaTime;
         textBox.text = Mathf.Round(time).ToString();
 
+
+        //set timer text to red if time is running out!
         if(time <= runningOutOfTime && !timeEnding)
         {
             timeEnding = true;
@@ -50,6 +56,7 @@ public class Countdown : MonoBehaviour
         //match time is over
         if(time <= 0)
         {
+            //load end scene
             SceneManager.LoadScene(endSceneName);
         }
     }

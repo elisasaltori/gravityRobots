@@ -14,11 +14,6 @@ public class CogBehavior : MonoBehaviour
         ps = GameObject.Find("PointsSystem").GetComponent<PointsSystem>();   
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
