@@ -195,7 +195,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31408903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.69, y: -0.103, z: 0}
+  m_LocalPosition: {x: 8.69, y: -0.103, z: 0.2}
   m_LocalScale: {x: 1, y: 2.092, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1564,8 +1564,8 @@ MonoBehaviour:
   - 0.4
   - 0.2
   waveTime: 9600000078000000500000000a000000
-  speedUpPoints: 50
   spawnTime: 3
+  secondSpawnTime: 50
 --- !u!4 &1719214882
 Transform:
   m_ObjectHideFlags: 0
@@ -1686,7 +1686,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773430877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.69, y: -0.019, z: 0}
+  m_LocalPosition: {x: -8.69, y: -0.019, z: 0.2}
   m_LocalScale: {x: 1, y: 2.102, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

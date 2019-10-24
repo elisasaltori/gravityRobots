@@ -19,7 +19,9 @@ public class MonsterSpawner : MonoBehaviour
     public int[] waveTime = new int[] {160, 140, 80, 10};
 
     public float spawnTime = 3f; //time between monsters (in seconds)
+    public float secondSpawnTime = 50.5f;
 
+    private bool secondSpawnerUp;
     private Countdown timer;
 
     void Start()
@@ -28,12 +30,18 @@ public class MonsterSpawner : MonoBehaviour
 
         // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
         InvokeRepeating("Spawn", spawnTime, spawnTime);
+        secondSpawnerUp = false;
 
     }
 
     private void Update()
     {
-       
+       if(timer.GetTime()< secondSpawnTime && !secondSpawnerUp)
+        {
+            InvokeRepeating("Spawn", spawnTime, spawnTime);
+            secondSpawnerUp = true;
+
+        }
     }
 
     int GetEnemyType()
@@ -60,8 +68,8 @@ public class MonsterSpawner : MonoBehaviour
 
         }
 
+        //third wave: add flying monster
         num = Random.Range(0f, 1f);
-        Debug.Log(num);
 
         if (num > chances[0] + chances[1])
             return 2;
