@@ -17,7 +17,6 @@ public class MonsterSpawner : MonoBehaviour
 
     public float[] chances = new float[] { 0.4f, 0.4f, 0.2f}; //random chance for each 
     public int[] waveTime = new int[] {160, 140, 80, 10};
-    public int speedUpPoints = 50; 
 
     public float spawnTime = 3f; //time between monsters (in seconds)
 
@@ -32,24 +31,43 @@ public class MonsterSpawner : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+       
+    }
+
     int GetEnemyType()
     {
         float time = timer.GetTime();
         
+        //First wave: only simple monsters
         if(time > waveTime[0])
         {
-            //Debug.Log("wave 0");
             return 0;
         }
+
+        float num;
         
+        //Second wave: add shooting monsters
         if(time > waveTime[1])
         {
-            Debug.Log("wave 1");
-            return (int)Random.Range(0, 2);
+            num = Random.Range(0, chances[0] + chances[1]);
+
+            if (num > chances[0])
+                return 1;
+
+            return 0;
+
         }
 
-        Debug.Log("wave 2");
-        return (int)Random.Range(0, enemyPrefabs.Length);
+        num = Random.Range(0f, 1f);
+        Debug.Log(num);
+
+        if (num > chances[0] + chances[1])
+            return 2;
+        if (num > chances[0])
+            return 1;
+        return 0;
     }
 
     void Spawn()
@@ -60,7 +78,7 @@ public class MonsterSpawner : MonoBehaviour
 
         //get enemy type
         int enemyType = GetEnemyType();
-
+        Debug.Log("enemy "+enemyType);
 
         //get enemy z spawn position
         float spawnZ = Random.Range(zMinSpawn, zMaxSpawn);
