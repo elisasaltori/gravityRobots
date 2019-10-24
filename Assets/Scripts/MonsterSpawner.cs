@@ -15,18 +15,24 @@ public class MonsterSpawner : MonoBehaviour
     public float zMaxSpawn = 1.8f;
 
 
-    public float[] chances = new float[] { 0.4f, 0.4f, 0.2f}; //random chance for each 
-    public int[] waveTime = new int[] {160, 140, 80, 10};
+    public float[] chances = new float[] { 0.4f, 0.4f, 0.2f}; //random chance for each monster
+    public int[] waveTime = new int[] {160, 140, 80}; //match times at which new monsters start spawning
 
     public float spawnTime = 3f; //time between monsters (in seconds)
-    public float secondSpawnTime = 50.5f;
+    public float secondSpawnTime = 50.5f; //time to add a second spawner
+    public float thirdSpawnTime = 10f; //time to add a third spawner
+
+    public int monsterLimit = 20; //max number of monsters on screen at one time
+    private int monsterCount;
 
     private bool secondSpawnerUp;
+    private bool thirdSpawnerUp;
     private Countdown timer;
 
     void Start()
     {
         timer = GameObject.Find("Countdown").GetComponent<Countdown>();
+        monsterCount = 0;
 
         // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
         InvokeRepeating("Spawn", spawnTime, spawnTime);
@@ -36,14 +42,24 @@ public class MonsterSpawner : MonoBehaviour
 
     private void Update()
     {
+        //get second spawner up
        if(timer.GetTime()< secondSpawnTime && !secondSpawnerUp)
         {
             InvokeRepeating("Spawn", spawnTime, spawnTime);
             secondSpawnerUp = true;
 
         }
+
+        //get third spawner up
+        if (timer.GetTime() < thirdSpawnTime && !thirdSpawnerUp)
+        {
+            InvokeRepeating("Spawn", spawnTime, spawnTime);
+            thirdSpawnerUp = true;
+
+        }
     }
 
+    //returns index for enemy type
     int GetEnemyType()
     {
         float time = timer.GetTime();
@@ -80,6 +96,11 @@ public class MonsterSpawner : MonoBehaviour
 
     void Spawn()
     {
+        //dont spawn if at monster limit!
+        if (monsterCount >= monsterLimit)
+            return;
+
+        monsterCount++;
 
         // Find a random index between zero and one less than the number of spawn points.
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
@@ -96,6 +117,11 @@ public class MonsterSpawner : MonoBehaviour
 
         // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
         Instantiate(enemyPrefabs[enemyType], pos, spawnPoints[spawnPointIndex].rotation);
+    }
+
+    public void DecreaseMonsterCount()
+    {
+        monsterCount--;
     }
 
 

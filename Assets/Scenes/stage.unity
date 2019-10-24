@@ -1681,6 +1681,8 @@ MonoBehaviour:
   waveTime: 9600000078000000500000000a000000
   spawnTime: 3
   secondSpawnTime: 50
+  thirdSpawnTime: 10
+  monsterLimit: 20
 --- !u!4 &1719214882
 Transform:
   m_ObjectHideFlags: 0
