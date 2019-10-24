@@ -59,8 +59,7 @@ public class BulletControl : MonoBehaviour
             //hit an enemy, destroy enemy and begin bubbling up
             if (enemyTag != null && collision.gameObject.CompareTag(enemyTag))
             {
-                Debug.Log("hit an enemy!");
-                //
+                
                 collision.gameObject.GetComponent<EnemyBubbleControl>().EnemyHit(isPlayerOne);
 
 

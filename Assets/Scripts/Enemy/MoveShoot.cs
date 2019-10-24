@@ -40,7 +40,7 @@ public class MoveShoot : MonoBehaviour
 		{
 			shootCooldown -= Time.deltaTime;
 		}
-        animator.SetTrigger("shooting");
+        animator.SetTrigger("Shoot");
         Shoots();
     }
 
@@ -70,7 +70,7 @@ public class MoveShoot : MonoBehaviour
 	        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), bullet.GetComponent<Collider2D>());
 	        bullet.transform.position = (this.transform.position + transform.right * (dir *spawnDist));
 	        bullet.GetComponent<Rigidbody2D>().velocity = dir * (speed * transform.right);
-	        Debug.Log("Atirou!"); 
+	        //Debug.Log("Atirou!"); 
 		}
     }
 }

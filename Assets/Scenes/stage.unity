@@ -1559,6 +1559,12 @@ MonoBehaviour:
   - {fileID: 2046348025628244610, guid: f41c04fc4e4ad414cb9bd466fe703bdc, type: 3}
   zMinSpawn: 1
   zMaxSpawn: 2
+  chances:
+  - 0.4
+  - 0.4
+  - 0.2
+  waveTime: 9600000078000000500000000a000000
+  speedUpPoints: 50
   spawnTime: 3
 --- !u!4 &1719214882
 Transform:
