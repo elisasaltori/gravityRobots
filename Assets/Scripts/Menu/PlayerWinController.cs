@@ -28,7 +28,7 @@ public class PlayerWinController : MonoBehaviour
         string res = ps.GetMatchResult();
         Debug.Log("match result: " + res);
 
-        //disable/enable right images
+        //disable/enable right images/objects
         //change win text
         if (res.Equals("P1"))
         {
