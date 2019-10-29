@@ -50,7 +50,6 @@ public class GravityFieldControl : MonoBehaviour
             {
                 //check if player
                 //if so, add points to player then pop!
-                Debug.Log("Field popped!");
                 GetComponent<Collider2D>().enabled = false;
                 ps.AddPoints(collision.GetComponent<IsPlayerOne>().isPlayerOne, popPoints);
 

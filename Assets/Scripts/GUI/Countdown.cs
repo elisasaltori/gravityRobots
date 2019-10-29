@@ -28,6 +28,11 @@ public class Countdown : MonoBehaviour
         timerSound = GetComponent<AudioSource>();
     }
 
+    public float GetTime()
+    {
+        return time;
+    }
+
     // Use this for initialization
     void Start()
     {
