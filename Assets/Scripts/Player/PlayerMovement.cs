@@ -30,11 +30,15 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Animator animator;
+    private Renderer objRender;
 
     
     private float horizontalMove;
     private float verticalMove;
     public bool stunned = false;
+    public bool gracePeriod = false;
+    private float alpha = 0.5f;
+    private int counter = 0;
 
     // Called before start
     private void Awake()
@@ -58,9 +62,29 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Enter if player is not stunned
         if (!stunned)
         {
+            // Blinking player in grace period
+            if (gracePeriod)
+            {
+                objRender = GetComponent<Renderer>();
+                objRender.material.color = new Color(1.0f, 1.0f, 1.0f, alpha);
+                if (counter > 10)
+                {
+                    if (alpha != 1.0f)
+                    {
+                        alpha = 1.0f;
+                    } else
+                    {
+                        alpha = 0.5f;
+                    }
+                    counter = 0;
+                }
+                counter++;
+            }
             
+            // Player goes right or left
             if (Input.GetKey(controls.right))
             {
                 horizontalMove = 1;
@@ -72,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
                 horizontalMove = 0;
             }
 
-            
+            // Player jumps
             if (Input.GetKey(controls.up))
             {
                 verticalMove = 1;
@@ -91,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
        
         animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 
-        //flips sprite to match movement
+        // Flips sprite to match movement
         if (horizontalMove > 0 && !facingRight)
         {
             flipSprite();
@@ -101,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
             flipSprite();
         }
 
-        // if the player is not in the air and there is vertical movement, player jumps
+        // If the player is not in the air and there is vertical movement, player jumps
         if (verticalMove > 0 && isOnGround())
         {
             animator.SetTrigger("jumping");
@@ -126,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 direction = Vector2.down;
         float distance = 1.15f;
 
-        //raycast ignores player layer due to layerMask
+        // Raycast ignores player layer due to layerMask
         RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, layerMask);
         if (hit.collider != null && rb.velocity.y == 0)
         {
@@ -138,29 +162,49 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "monstro_simples(Clone)")
+        // On collision with a monster, stun player
+        if (collision.gameObject.tag == "Enemy")
         {
-            //on collision with a monster, stun player
             Stun();
         }
     }
 
-    private void Stun()
+    // Used to stop player movement and shooting for some time after being hit
+    public void Stun()
     {
-        // rb.velocity = Vector2.zero;
-        //rb.sleepMode
+      //;; ; Time.timeScale = 0;
+        // If is in grace period, player is not stunned again
+        if(gracePeriod == true)
+        {
+            return;
+        }
+
         stunned = true;
         animator.SetBool("stunned", true);
         horizontalMove = 0;
         verticalMove = 0;
         StartCoroutine(wait(2));
-        //stunned = false;
     }
 
+    // Wait stunned
     IEnumerator wait(int sec)
     {
+        gracePeriod = true;
         yield return new WaitForSeconds(sec);
         animator.SetBool("stunned", false);
         stunned = false;
+        StartCoroutine(waitGP(2));
+
+    }
+
+    // Wait grace period
+    IEnumerator waitGP(int sec)
+    {
+        //objRender = GetComponent<Renderer>();
+        //objRender.material.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
+        yield return new WaitForSeconds(sec);
+        objRender.material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        gracePeriod = false;
+        Debug.Log("GRACE PERIOD");
     }
 }
