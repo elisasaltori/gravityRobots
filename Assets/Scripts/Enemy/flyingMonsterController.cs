@@ -11,36 +11,16 @@ public class flyingMonsterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
- 
-        // flipSprite();
+        setFlipSpriteDirection();
         Vector2 vect = GetComponent<Rigidbody2D>().velocity;
         GetComponent<Rigidbody2D>().velocity = new Vector2(vect.x, direction * speed);
-        //Collider2D = collider;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
         Vector2 vect = GetComponent<Rigidbody2D>().velocity;
         GetComponent<Rigidbody2D>().velocity = new Vector2(vect.x, direction * speed);
-
-        //Debug.Log("Passou no Update");
-
-        //Vector2 position = rigidbody2D.position;
-
-        //if(rigidbody2D.)
-
-        //direction = verifyWallHit(position);
-        /*direction = OnCollisionEnter2D(rigidbody2D);
-		
-        Debug.Log(direction);*/
-        //direction =  OnTriggerEnter2D();
-
-        //position.x = position.x + (Time.deltaTime * speed * direction);
-
-        //rigidbody2D.MovePosition(position);
     }
 
     public int getDirection()
@@ -57,9 +37,17 @@ public class flyingMonsterController : MonoBehaviour
         transform.localScale = scale;
     }
 
+    void setFlipSpriteDirection() {
+        if (transform.position.x > 0.56) {
+            flipSprite();
+        }
+    }
+
     public void changeDirection()
     {
-        // flipSprite();
+        if (transform.position.x > -0.83 && transform.position.x < 0.56) {
+            flipSprite();
+        }
         this.direction = this.direction * (-1);
         Vector2 vect = GetComponent<Rigidbody2D>().velocity;
         GetComponent<Rigidbody2D>().velocity = new Vector2(vect.x, direction * speed);
