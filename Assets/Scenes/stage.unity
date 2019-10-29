@@ -322,18 +322,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2267f2876b1199445856268d20c1e269, type: 3}
---- !u!114 &59103411 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8778682515600944136, guid: 35ff1c3a6778d284682af0e580a8c231,
-    type: 3}
-  m_PrefabInstance: {fileID: 8778682517405046699}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &140664338
 GameObject:
   m_ObjectHideFlags: 0
@@ -2621,18 +2609,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2267f2876b1199445856268d20c1e269, type: 3}
---- !u!114 &1278421840 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8778682516580544748, guid: 35ff1c3a6778d284682af0e580a8c231,
-    type: 3}
-  m_PrefabInstance: {fileID: 8778682517405046699}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1341218542
 GameObject:
   m_ObjectHideFlags: 0
@@ -3371,26 +3347,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 887795354749962045}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1837730297 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6815181647600326871, guid: 35ff1c3a6778d284682af0e580a8c231,
-    type: 3}
-  m_PrefabInstance: {fileID: 8778682517405046699}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1837730298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837730297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1d49104a7dd784eba698bdae5fc462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points1Text: {fileID: 1278421840}
-  points2Text: {fileID: 59103411}
 --- !u!1 &1882513497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5079216284774997831, guid: 5fda779ac1ec2ba45aca1ad3e1aaee5d,

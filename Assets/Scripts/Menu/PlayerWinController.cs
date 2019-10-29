@@ -16,8 +16,8 @@ public class PlayerWinController : MonoBehaviour
     public GameObject draw;
     public Text modelSelected;
 
-    string modelWinText = "MODELO SELECIONADO: ";
-    string modelDrawText = "MODELOS EMPATADOS";
+    string modelWinText = "SELECTED MODEL: ";
+    string modelDrawText = "DRAW!";
     PointsSystem ps;
 
     // Start is called before the first frame update
