@@ -986,7 +986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &216084040
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1622,6 +1622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 632247326}
   - component: {fileID: 632247327}
+  - component: {fileID: 632247328}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1714,6 +1715,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &632247328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632247325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5407bb9de4de61f4f80ac6cf1aeef90e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: a0f7445a0f784cb4ab09c1b1dfd42333, type: 2}
 --- !u!1 &637075541
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,7 +3883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2051299829
 RectTransform:
   m_ObjectHideFlags: 0
