@@ -14,10 +14,12 @@ public class EnemyBubbleControl : MonoBehaviour
 
 
     private PointsSystem ps;
+    private MonsterSpawner ms;
 
     private void Awake()
     {
         ps = GameObject.FindGameObjectWithTag("PointsManager").GetComponent<PointsSystem>();
+        ms = GameObject.Find("SpawnPoints").GetComponent<MonsterSpawner>();
     }
 
     public void EnemyHit(bool isPlayerOne)
@@ -36,7 +38,8 @@ public class EnemyBubbleControl : MonoBehaviour
 
         //add points to player for killing the monster
         ps.AddPoints(isPlayerOne, killPoints);
-
+        //tell monster spawner the monster is dead
+        ms.DecreaseMonsterCount();
        
 
         //spawns filled field a little above monster so it doesnt get stuck to a platform

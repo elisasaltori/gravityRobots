@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
-
-
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;//makes shure the game goes back at normal speed
+        SceneManager.LoadScene(0);//scene 0 is MainMenu
     }
 }

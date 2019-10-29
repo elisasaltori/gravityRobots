@@ -63,4 +63,10 @@ public class PointsSystem : MonoBehaviour
             
 
     }
+
+    public void Reset()
+    {
+        p1Points = 0;
+        p2Points = 0;
+    }
 }
