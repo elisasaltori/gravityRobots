@@ -7,6 +7,7 @@ public class EnemyShoot : MonoBehaviour
     [Header("Attributes")]
     public int damage = 1;
     public string objectTag;
+    //public string playerTag = null; //always should have the Player tag
 
     void Update()
     {
@@ -17,7 +18,8 @@ public class EnemyShoot : MonoBehaviour
     {
         if (collider.gameObject.tag == objectTag) 
         {
-            Destroy(gameObject);
+            collider.gameObject.GetComponent<PlayerMovement>().Stun();
         }
+        Destroy(gameObject);
     }
 }

@@ -40,7 +40,8 @@ public class MoveShoot : MonoBehaviour
 		{
 			shootCooldown -= Time.deltaTime;
 		}
-        animator.SetTrigger("Shoot");
+        //animator.SetTrigger("shooting");
+        
         Shoots();
     }
 
@@ -48,7 +49,8 @@ public class MoveShoot : MonoBehaviour
     {
     	if (shootCooldown <= 0)
 		{
-			shootCooldown = shootintRate;
+            animator.SetTrigger("shooting");
+            shootCooldown = shootintRate;
 			Debug.Log(gameObject.GetType());
 			if (monsterType == 1)
 		    {
