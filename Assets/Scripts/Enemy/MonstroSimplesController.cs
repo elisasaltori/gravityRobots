@@ -24,7 +24,6 @@ public class MonstroSimplesController : MonoBehaviour
     {
         int rand = Random.Range(0, 2);
        
-        Debug.Log("num:" + rand);
         if (rand == 1)
             changeDirection();
     }
