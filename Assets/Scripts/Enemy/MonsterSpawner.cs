@@ -107,7 +107,6 @@ public class MonsterSpawner : MonoBehaviour
 
         //get enemy type
         int enemyType = GetEnemyType();
-        Debug.Log("enemy "+enemyType);
 
         //get enemy z spawn position
         float spawnZ = Random.Range(zMinSpawn, zMaxSpawn);
@@ -117,6 +116,8 @@ public class MonsterSpawner : MonoBehaviour
 
         // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
         Instantiate(enemyPrefabs[enemyType], pos, spawnPoints[spawnPointIndex].rotation);
+
+
     }
 
     public void DecreaseMonsterCount()
