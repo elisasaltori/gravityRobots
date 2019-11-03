@@ -16,12 +16,12 @@ public class PlayerWinController : MonoBehaviour
     public GameObject draw;
     public Text modelSelected;
 
-    string modelWinText = "MODELO SELECIONADO: ";
-    string modelDrawText = "MODELOS EMPATADOS";
+    string modelWinText = "SELECTED MODEL: ";
+    string modelDrawText = "DRAW!";
     PointsSystem ps;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         ps = GameObject.Find("PointsSystem").GetComponent<PointsSystem>();
         //check who won
@@ -33,6 +33,7 @@ public class PlayerWinController : MonoBehaviour
         if (res.Equals("P1"))
         {
             modelSelected.text = modelWinText + res;
+            modelSelected.color = Color.yellow;
             p1Win.SetActive(true);
             p2Win.SetActive(false);
             draw.SetActive(false);
@@ -42,6 +43,7 @@ public class PlayerWinController : MonoBehaviour
             if (res.Equals("P2"))
             {
                 modelSelected.text = modelWinText + res;
+                modelSelected.color = Color.red;
                 p1Win.SetActive(false);
                 p2Win.SetActive(true);
                 draw.SetActive(false);

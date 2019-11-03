@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     /*function activates when QuitButton is pressed*/
     public void QuitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;//necessary for the QuitButton to work inside unity editor
+        //UnityEditor.EditorApplication.isPlaying = false;//necessary for the QuitButton to work inside unity editor
         Debug.Log("QUIT!");//for tests inside unity editor only
         Application.Quit();
     }

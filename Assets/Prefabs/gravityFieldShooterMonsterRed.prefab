@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  floatSpeed: 2
+  floatSpeed: 3
   popPoints: 10
 --- !u!114 &-4224861468598404602
 MonoBehaviour:

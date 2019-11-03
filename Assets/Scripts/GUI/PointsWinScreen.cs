@@ -18,8 +18,13 @@ public class PointsWinScreen : MonoBehaviour
         ps = GameObject.FindGameObjectWithTag("PointsManager").GetComponent<PointsSystem>();
         points1Text.text = "" + ps.GetP1Points();
         points2Text.text = "" + ps.GetP2Points();
-        ps.Reset();
+        
 
+    }
+
+    private void Start()
+    {
+        ps.Reset();
     }
 
 }
