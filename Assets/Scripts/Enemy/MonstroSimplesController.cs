@@ -13,9 +13,19 @@ public class MonstroSimplesController : MonoBehaviour
     {
  
         flipSprite();
+        SetRandomDirection();
         Vector2 vect = GetComponent<Rigidbody2D>().velocity;
         GetComponent<Rigidbody2D>().velocity = new Vector2(direction * speed, vect.y);
         //Collider2D = collider;
+    }
+
+    //called when monster starts so it's facing a random direction (right or left)
+    void SetRandomDirection()
+    {
+        int rand = Random.Range(0, 2);
+       
+        if (rand == 1)
+            changeDirection();
     }
 
     // Update is called once per frame
