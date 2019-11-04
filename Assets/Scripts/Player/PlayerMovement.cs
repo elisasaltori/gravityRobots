@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     // Atributos
     [Header("Attributes")]
     public float speed = 20;
+    public float maxVelocity = 5;
     public float jumpForce = 500;
     public bool facingRight = true;
 
@@ -112,6 +113,10 @@ public class PlayerMovement : MonoBehaviour
     {
 
         rb.AddForce(Vector2.right * horizontalMove * speed);
+
+        //caps player horizontal speed
+        if (rb.velocity.x > maxVelocity)
+            rb.velocity = new Vector2(maxVelocity, rb.velocity.y);
        
         animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 

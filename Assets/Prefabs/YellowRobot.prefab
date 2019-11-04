@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  maxVelocity: 10
   jumpForce: 525
   facingRight: 1
   controls:
@@ -127,6 +128,8 @@ MonoBehaviour:
   isGround:
     serializedVersion: 2
     m_Bits: 256
+  stunned: 0
+  gracePeriod: 0
 --- !u!114 &5079216284774997836
 MonoBehaviour:
   m_ObjectHideFlags: 0
