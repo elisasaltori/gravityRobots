@@ -12,6 +12,8 @@ public static class RankingManager
 {
 
     private static string gameDataProjectFilePath = "ranking.json";
+    public static string player1Name = null;
+    public static string player2Name = null;
     static ScoreDictionary ranking;
 
     //returns loaded ranking objected
@@ -29,7 +31,9 @@ public static class RankingManager
         {
             //default ranking
             ranking = new ScoreDictionary();
-            ranking.Add("none", 0);
+            ranking.Add("Purple Bug", 20);
+            ranking.Add("Green Bug", 50);
+            ranking.Add("Blue Bug", 10);
         }
 
         return ranking;

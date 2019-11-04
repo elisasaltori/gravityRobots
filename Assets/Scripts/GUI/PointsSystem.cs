@@ -75,15 +75,6 @@ public class PointsSystem : MonoBehaviour
 
     public void Reset()
     {
-        Debug.Log("Score reset!");
-        p1Points = 0;
-        p2Points = 0;
-    }
-
-    public void ResetAndSave()
-    {
-        RankingManager.UpdateRanking("player1", p1Points, "player2", p2Points);
-        RankingManager.SaveRanking();
         p1Points = 0;
         p2Points = 0;
     }
