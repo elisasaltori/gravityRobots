@@ -9,8 +9,8 @@ using UnityEngine.UI;
 public class PointsSystem : MonoBehaviour
 {
 
-    public int p1Points;
-    public int p2Points;
+    int p1Points;
+    int p2Points;
     private static PointsSystem instance;
 
     // Start is called before the first frame update
@@ -25,7 +25,8 @@ public class PointsSystem : MonoBehaviour
         }
         else if (instance != this){
             Destroy(gameObject);
-        }
+        }
+
  
     }
 

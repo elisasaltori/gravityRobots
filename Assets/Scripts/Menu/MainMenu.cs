@@ -16,6 +16,12 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    public void Back()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);//goes to last scene
+
+    }
+
     /*function activates when QuitButton is pressed*/
     public void QuitGame()
     {

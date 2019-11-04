@@ -51,6 +51,7 @@ public static class RankingManager
 
         string filePath = System.IO.Path.Combine(Application.persistentDataPath, gameDataProjectFilePath);
 
+
         File.WriteAllText(filePath, dataAsJson);
     }
 
