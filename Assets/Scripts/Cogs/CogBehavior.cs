@@ -17,7 +17,6 @@ public class CogBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       
         if (collision.gameObject.CompareTag("Player"))
         {
             //give points to correct player
@@ -25,6 +24,10 @@ public class CogBehavior : MonoBehaviour
             ps.AddPoints(playerOne, points);
             //destroy itself
             Destroy(gameObject);
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().Play("Cog");
         }
     }
 }

@@ -55,6 +55,8 @@ public class Shoot : MonoBehaviour
 
     private void Shoots()
     {
+        FindObjectOfType<AudioManager>().Play("Shoot");
+
         facing = gameObject.GetComponent<PlayerMovement>().facingRight;
         if (facing)
         {
