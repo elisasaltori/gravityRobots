@@ -9,8 +9,8 @@ using UnityEngine.UI;
 public class PointsSystem : MonoBehaviour
 {
 
-    private int p1Points;
-    private int p2Points;
+    public int p1Points;
+    public int p2Points;
     private static PointsSystem instance;
 
     // Start is called before the first frame update
@@ -74,7 +74,18 @@ public class PointsSystem : MonoBehaviour
 
     public void Reset()
     {
+        Debug.Log("Score reset!");
         p1Points = 0;
         p2Points = 0;
     }
+
+    public void ResetAndSave()
+    {
+        RankingManager.UpdateRanking("player1", p1Points, "player2", p2Points);
+        RankingManager.SaveRanking();
+        p1Points = 0;
+        p2Points = 0;
+    }
+
+
 }
