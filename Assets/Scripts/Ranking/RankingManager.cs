@@ -31,9 +31,11 @@ public static class RankingManager
         {
             //default ranking
             ranking = new ScoreDictionary();
-            ranking.Add("Purple Bug", 20);
-            ranking.Add("Green Bug", 50);
-            ranking.Add("Blue Bug", 10);
+            ranking.Add("Purple Bug", 100);
+            ranking.Add("Green Bug", 200);
+            ranking.Add("Blue Bug", 50);
+            ranking.Add("Cog", 10);
+            ranking.Add("Gravity Robots Inc.", 500);
         }
 
         return ranking;
