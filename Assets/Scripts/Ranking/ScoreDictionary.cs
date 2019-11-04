@@ -3,4 +3,4 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class ScoreDictionary : SerializableDictionary<int, string> { }
+public class ScoreDictionary : SerializableDictionary<string, int> { }

@@ -12,7 +12,6 @@ public static class RankingManager
     private static string gameDataProjectFilePath = "ranking.json";
     static ScoreDictionary ranking;
 
-    //Load ranking from file (if file is missing, default ranking is loaded)
     //returns loaded ranking objected
     public static ScoreDictionary LoadRanking()
     {
@@ -58,11 +57,30 @@ public static class RankingManager
     //Updates ranking using finalScore and the name given
     public static void UpdateRanking(string player1, int score1, string player2, int score2)
     {
+        if (ranking == null)
+            LoadRanking();
+
         //add scores to ranking
-        ranking.Add(score1, player1);
-        ranking.Add(score2, player2);
+        AddOrUpdate(ranking, player1, score1);
+        AddOrUpdate(ranking, player2, score2);
+
         //call SaveRanking
         SaveRanking();
+    }
+
+    static void AddOrUpdate(ScoreDictionary dict, string key, int newValue)
+    {
+        //player already has score
+        if (dict.ContainsKey(key)) {
+            //update value only if new score is higher
+            if(dict[key] < newValue)
+                dict[key] = newValue;
+        }
+        else
+        {
+            //first score recorded for player
+            dict.Add(key, newValue);
+        }
     }
 
 

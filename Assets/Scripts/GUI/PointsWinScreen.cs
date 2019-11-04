@@ -22,9 +22,5 @@ public class PointsWinScreen : MonoBehaviour
 
     }
 
-    private void Start()
-    {
-        ps.Reset();
-    }
 
 }
