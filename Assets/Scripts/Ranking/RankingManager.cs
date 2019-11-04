@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using System.Linq;
+
 
 /// <summary>
 /// Loads, updates and saves ranking
@@ -27,6 +29,7 @@ public static class RankingManager
         {
             //default ranking
             ranking = new ScoreDictionary();
+            ranking.Add("none", 0);
         }
 
         return ranking;
@@ -96,5 +99,25 @@ public static class RankingManager
         File.Delete(filePath);
 
         SaveRanking();
+    }
+
+    public static int GetHighScore()
+    {
+        if (ranking == null)
+            LoadRanking();
+
+        var top1 = ranking.OrderByDescending(pair => pair.Value).Take(1);
+
+        return top1.First().Value;
+    }
+
+    //get highest n scores 
+    public static IEnumerable<KeyValuePair<string, int>> GetHighScores(int n)
+    {
+        if (ranking == null)
+            LoadRanking();
+
+        var top = ranking.OrderByDescending(pair => pair.Value).Take(n);
+        return top;
     }
 }
