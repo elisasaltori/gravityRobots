@@ -19,6 +19,8 @@ public class CogBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("CogCaptured");
+
             //give points to correct player
             bool playerOne = collision.gameObject.GetComponent<IsPlayerOne>().isPlayerOne;
             ps.AddPoints(playerOne, points);

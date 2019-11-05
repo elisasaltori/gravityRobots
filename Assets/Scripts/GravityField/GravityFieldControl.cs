@@ -48,6 +48,8 @@ public class GravityFieldControl : MonoBehaviour
         {
             if (collision.gameObject.CompareTag(playerTag))
             {
+                FindObjectOfType<AudioManager>().Play("Pop");//play pop sound
+
                 //check if player
                 //if so, add points to player then pop!
                 GetComponent<Collider2D>().enabled = false;
