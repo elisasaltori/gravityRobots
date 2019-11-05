@@ -19,10 +19,6 @@ public class PlayerMovement : MonoBehaviour
         public KeyCode right;
         public KeyCode left;
 
-        public KeyCode upJoystick;
-        public KeyCode downJoystick;
-        public KeyCode rightJoystick;
-        public KeyCode leftJoystick;
     }
 
     [Header("Controls")]
@@ -91,10 +87,10 @@ public class PlayerMovement : MonoBehaviour
             }
             
             // Player goes right or left
-            if (Input.GetKey(controls.right) || Input.GetKey(controls.rightJoystick))
+            if (Input.GetKey(controls.right))
             {
                 horizontalMove = 1;
-            } else if (Input.GetKey(controls.left) || Input.GetKey(controls.leftJoystick))
+            } else if (Input.GetKey(controls.left))
             {
                 horizontalMove = -1;
             } else
@@ -103,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // Player jumps
-            if (Input.GetKey(controls.up) || Input.GetKey(controls.upJoystick))
+            if (Input.GetKey(controls.up))
             {
                 verticalMove = 1;
             } else
@@ -178,7 +174,6 @@ public class PlayerMovement : MonoBehaviour
     // Used to stop player movement and shooting for some time after being hit
     public void Stun()
     {
-      //;; ; Time.timeScale = 0;
         // If is in grace period, player is not stunned again
         if(gracePeriod == true)
         {
@@ -206,11 +201,9 @@ public class PlayerMovement : MonoBehaviour
     // Wait grace period
     IEnumerator waitGP(int sec)
     {
-        //objRender = GetComponent<Renderer>();
-        //objRender.material.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
         yield return new WaitForSeconds(sec);
         objRender.material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         gracePeriod = false;
-        Debug.Log("GRACE PERIOD");
+        //Debug.Log("GRACE PERIOD");
     }
 }

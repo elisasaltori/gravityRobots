@@ -18,7 +18,6 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        //move.stunned = true;
         StartCoroutine(Countdown(3));
     }
 

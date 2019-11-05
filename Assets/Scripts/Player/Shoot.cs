@@ -9,7 +9,6 @@ public class Shoot : MonoBehaviour
     public float speed = 10.0f; //speed of projectile
     public float spawnDist = 0.05f; // Distance of player
     public float dir = 1; //direction
-    //public float fireRate = 0.1f; //shooting cooldown
 
     private Animator animator;
 
@@ -18,7 +17,6 @@ public class Shoot : MonoBehaviour
     {
         public KeyCode shoot;
 
-        public KeyCode shootJoystick;
     }
 
     [Header("Controls")]
@@ -29,7 +27,6 @@ public class Shoot : MonoBehaviour
 
     private bool facing;
     private bool stunned;
-    //private float nextFire = 0.01f;
 
     public void Awake()
     {
@@ -50,11 +47,8 @@ public class Shoot : MonoBehaviour
         if (!stunned)
         {
             //if (Input.GetKeyDown(controls.shoot) && Time.time > nextFire)
-            if ((Input.GetKeyDown(controls.shoot) || Input.GetKeyDown(controls.shootJoystick))
-                && GameObject.Find((bomb.name) + "(Clone)") == null)
+            if (Input.GetKeyDown(controls.shoot) && GameObject.Find((bomb.name) + "(Clone)") == null)
             {
-                //nextFire = Time.time + fireRate;
-                //Debug.Log(Time.time);
                 animator.SetTrigger("shooting");
                 Shoots();
             }
