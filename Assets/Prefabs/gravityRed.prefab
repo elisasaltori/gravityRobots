@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4656223368679544241}
   - component: {fileID: -5075114384615070262}
   m_Layer: 0
-  m_Name: gravityTemp
+  m_Name: gravityRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

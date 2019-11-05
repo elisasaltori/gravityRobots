@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  maxVelocity: 10
   jumpForce: 525
   facingRight: 0
   controls:

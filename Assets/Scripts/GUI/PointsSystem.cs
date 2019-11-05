@@ -9,16 +9,25 @@ using UnityEngine.UI;
 public class PointsSystem : MonoBehaviour
 {
 
-    private int p1Points;
-    private int p2Points;
-
+    int p1Points;
+    int p2Points;
+    private static PointsSystem instance;
 
     // Start is called before the first frame update
     void Awake()
     {
-        p1Points = 0;
-        p2Points = 0;
-        DontDestroyOnLoad(this.gameObject); //so its not destroyed when score scene is loaded
+        //singleton pattern
+        if(instance == null){
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            p1Points = 0;
+            p2Points = 0;
+        }
+        else if (instance != this){
+            Destroy(gameObject);
+        }
+
+ 
     }
 
     /**
@@ -69,4 +78,6 @@ public class PointsSystem : MonoBehaviour
         p1Points = 0;
         p2Points = 0;
     }
+
+
 }

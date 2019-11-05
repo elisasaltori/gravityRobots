@@ -26,7 +26,6 @@ public class PlayerWinController : MonoBehaviour
         ps = GameObject.Find("PointsSystem").GetComponent<PointsSystem>();
         //check who won
         string res = ps.GetMatchResult();
-        Debug.Log("match result: " + res);
 
         //disable/enable right images/objects
         //change win text
@@ -58,6 +57,5 @@ public class PlayerWinController : MonoBehaviour
         }
         
     }
-
  
 }

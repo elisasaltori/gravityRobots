@@ -17,6 +17,7 @@ public class PointsGUI : MonoBehaviour
     void Awake()
     {
         ps = GameObject.FindGameObjectWithTag("PointsManager").GetComponent<PointsSystem>();
+        ps.Reset();
 
     }
 
