@@ -11,6 +11,6 @@ public class VolumeSettings : MonoBehaviour
     public void SetVolume (float volume)
     {
         Debug.Log(volume);//print the volume value
-        audioMixer.SetFloat("Volume", volume);
+        audioMixer.SetFloat("Volume", Mathf.Log10(volume)*20);//because volume is in log scale
     }
 }

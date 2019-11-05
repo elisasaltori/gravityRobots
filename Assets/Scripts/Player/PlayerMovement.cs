@@ -189,6 +189,8 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = 0;
         verticalMove = 0;
         StartCoroutine(wait(2));
+
+        FindObjectOfType<AudioManager>().Play("RobotStunned");
     }
 
     // Wait stunned

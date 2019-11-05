@@ -68,7 +68,9 @@ public class MoveShoot : MonoBehaviour
 	            dir = -1;
 	        }
 
-	        GameObject bullet = Instantiate(bomb);
+            FindObjectOfType<AudioManager>().Play("MonsterShoot");
+
+            GameObject bullet = Instantiate(bomb);
 	        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), bullet.GetComponent<Collider2D>());
 	        bullet.transform.position = (this.transform.position + transform.right * (dir *spawnDist));
 	        bullet.GetComponent<Rigidbody2D>().velocity = dir * (speed * transform.right);

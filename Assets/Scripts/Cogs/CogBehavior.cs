@@ -17,14 +17,19 @@ public class CogBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       
         if (collision.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("CogCaptured");
+
             //give points to correct player
             bool playerOne = collision.gameObject.GetComponent<IsPlayerOne>().isPlayerOne;
             ps.AddPoints(playerOne, points);
             //destroy itself
             Destroy(gameObject);
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().Play("Cog");
         }
     }
 }
