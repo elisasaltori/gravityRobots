@@ -11,7 +11,44 @@ public class PauseMenu : MonoBehaviour
     public GameObject resumeButton;
     public GameObject mainMenuButton;
     public GameObject confirmationBox;
+    public GameObject startCountDown;
+    public GameObject p1Tips;
+    public GameObject p2Tips;
 
+
+    private void Start()
+    {
+        StartCoroutine(Countdown(3));
+    }
+
+    // This is used for the start countdown. 3 2 1 GO
+    IEnumerator Countdown(int seconds)
+    {
+        // Changes all players state to stunned, so they can't move or shoot
+        for (int i = 0; i < 2; i++)
+        {
+            FindObjectsOfType<PlayerMovement>()[i].stunned = true;
+        }
+
+        int count = seconds;
+        
+        while (count > 0)
+        {
+            Debug.Log(count);
+            yield return new WaitForSeconds(1);
+            count--;
+        }
+
+        // Changes all players state to regular, so they can start moving and shooting
+        for (int i = 0; i<2; i++)
+        {
+        FindObjectsOfType<PlayerMovement>()[i].stunned = false;
+        }
+        // Removes the Start countdown and the keys tip from screen
+        startCountDown.gameObject.SetActive(false);
+        p1Tips.gameObject.SetActive(false);
+        p2Tips.gameObject.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update()

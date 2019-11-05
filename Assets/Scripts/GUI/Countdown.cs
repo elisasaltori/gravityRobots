@@ -44,10 +44,15 @@ public class Countdown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Does not start counter if the 3 2 1 GO still on
+        if (FindObjectOfType<PauseMenu>().startCountDown.activeSelf)
+        {
+            return;
+        }
+
         //reduces timer and updates text
         time -= Time.deltaTime;
         textBox.text = Mathf.Round(time).ToString();
-
 
         //set timer text to red if time is running out!
         if(time <= runningOutOfTime && !timeEnding)

@@ -6,9 +6,9 @@ public class Shoot : MonoBehaviour
 {
 
     [Header("Attributes")]
-    public float speed = 10.0f; //shooting speed
-    public float spawnDist = 0.05f;
-    public float dir = 1;
+    public float speed = 10.0f; //speed of projectile
+    public float spawnDist = 0.05f; // Distance of player
+    public float dir = 1; //direction
 
     private Animator animator;
 
@@ -16,6 +16,7 @@ public class Shoot : MonoBehaviour
     public struct Controls
     {
         public KeyCode shoot;
+
     }
 
     [Header("Controls")]
@@ -45,7 +46,8 @@ public class Shoot : MonoBehaviour
         stunned = gameObject.GetComponent<PlayerMovement>().stunned;
         if (!stunned)
         {
-            if (Input.GetKeyDown(controls.shoot))
+            //if (Input.GetKeyDown(controls.shoot) && Time.time > nextFire)
+            if (Input.GetKeyDown(controls.shoot) && GameObject.Find((bomb.name) + "(Clone)") == null)
             {
                 animator.SetTrigger("shooting");
                 Shoots();
@@ -65,7 +67,7 @@ public class Shoot : MonoBehaviour
         {
             dir = -1;
         }
-
+        
         GameObject bullet = Instantiate(bomb);
         Physics2D.IgnoreCollision(GetComponent<Collider2D>(), bullet.GetComponent<Collider2D>());
         bullet.transform.position = (this.transform.position + transform.right * (dir *spawnDist));

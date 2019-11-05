@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         public KeyCode down;
         public KeyCode right;
         public KeyCode left;
+
     }
 
     [Header("Controls")]
@@ -41,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     private float alpha = 0.5f;
     private int counter = 0;
 
+
     // Called before start
     private void Awake()
     {
@@ -53,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!facingRight)
+            if (!facingRight)
         {
             flipSprite();
             facingRight = !facingRight;
@@ -177,7 +179,6 @@ public class PlayerMovement : MonoBehaviour
     // Used to stop player movement and shooting for some time after being hit
     public void Stun()
     {
-      //;; ; Time.timeScale = 0;
         // If is in grace period, player is not stunned again
         if(gracePeriod == true)
         {
@@ -207,11 +208,9 @@ public class PlayerMovement : MonoBehaviour
     // Wait grace period
     IEnumerator waitGP(int sec)
     {
-        //objRender = GetComponent<Renderer>();
-        //objRender.material.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
         yield return new WaitForSeconds(sec);
         objRender.material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         gracePeriod = false;
-        Debug.Log("GRACE PERIOD");
+        //Debug.Log("GRACE PERIOD");
     }
 }
