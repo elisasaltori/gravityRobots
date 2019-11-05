@@ -18,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
         public KeyCode down;
         public KeyCode right;
         public KeyCode left;
+
+        public KeyCode upJoystick;
+        public KeyCode downJoystick;
+        public KeyCode rightJoystick;
+        public KeyCode leftJoystick;
     }
 
     [Header("Controls")]
@@ -40,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     private float alpha = 0.5f;
     private int counter = 0;
 
+
     // Called before start
     private void Awake()
     {
@@ -52,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!facingRight)
+            if (!facingRight)
         {
             flipSprite();
             facingRight = !facingRight;
@@ -85,10 +91,10 @@ public class PlayerMovement : MonoBehaviour
             }
             
             // Player goes right or left
-            if (Input.GetKey(controls.right))
+            if (Input.GetKey(controls.right) || Input.GetKey(controls.rightJoystick))
             {
                 horizontalMove = 1;
-            } else if (Input.GetKey(controls.left))
+            } else if (Input.GetKey(controls.left) || Input.GetKey(controls.leftJoystick))
             {
                 horizontalMove = -1;
             } else
@@ -97,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // Player jumps
-            if (Input.GetKey(controls.up))
+            if (Input.GetKey(controls.up) || Input.GetKey(controls.upJoystick))
             {
                 verticalMove = 1;
             } else

@@ -124,9 +124,15 @@ MonoBehaviour:
     down: 274
     right: 275
     left: 276
+    upJoystick: 0
+    downJoystick: 0
+    rightJoystick: 0
+    leftJoystick: 0
   isGround:
     serializedVersion: 2
     m_Bits: 256
+  stunned: 0
+  gracePeriod: 0
 --- !u!114 &1266682091939401999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +150,7 @@ MonoBehaviour:
   dir: 0
   controls:
     shoot: 256
+    shootJoystick: 430
   bomb: {fileID: 7321630080110096858, guid: 7d30461a85020af41ae2b3e014223675, type: 3}
 --- !u!50 &1266682091939401985
 Rigidbody2D:
