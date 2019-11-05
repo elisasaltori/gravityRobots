@@ -1061,7 +1061,7 @@ PrefabInstance:
     - target: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
         type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
         type: 3}
@@ -1071,7 +1071,7 @@ PrefabInstance:
     - target: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
         type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
         type: 3}
@@ -1086,7 +1086,7 @@ PrefabInstance:
     - target: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
         type: 3}
       propertyPath: sounds.Array.data[2].volume
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
         type: 3}
@@ -1140,7 +1140,7 @@ PrefabInstance:
     - target: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
         type: 3}
       propertyPath: sounds.Array.data[4].volume
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
         type: 3}
@@ -1182,7 +1182,7 @@ PrefabInstance:
     - target: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
         type: 3}
       propertyPath: sounds.Array.data[6].volume
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
         type: 3}
@@ -4742,28 +4742,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Countdown
       objectReference: {fileID: 0}
-    - target: {fileID: 887795353303958661, guid: 252a980af3d03b843b848efd06e9d7ad,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: a0f7445a0f784cb4ab09c1b1dfd42333,
-        type: 2}
-    - target: {fileID: 887795353303958664, guid: 252a980af3d03b843b848efd06e9d7ad,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 9f5d7286248c0794f8721168e26395a8,
-        type: 3}
-    - target: {fileID: 887795353303958664, guid: 252a980af3d03b843b848efd06e9d7ad,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 887795353303958664, guid: 252a980af3d03b843b848efd06e9d7ad,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 887795353303958665, guid: 252a980af3d03b843b848efd06e9d7ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4868,6 +4846,28 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 887795353303958661, guid: 252a980af3d03b843b848efd06e9d7ad,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a0f7445a0f784cb4ab09c1b1dfd42333,
+        type: 2}
+    - target: {fileID: 887795353303958664, guid: 252a980af3d03b843b848efd06e9d7ad,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 9f5d7286248c0794f8721168e26395a8,
+        type: 3}
+    - target: {fileID: 887795353303958664, guid: 252a980af3d03b843b848efd06e9d7ad,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 887795353303958664, guid: 252a980af3d03b843b848efd06e9d7ad,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 887795353303958666, guid: 252a980af3d03b843b848efd06e9d7ad,
         type: 3}
