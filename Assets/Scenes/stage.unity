@@ -4189,7 +4189,7 @@ PrefabInstance:
     - target: {fileID: 5079216284774997836, guid: 5fda779ac1ec2ba45aca1ad3e1aaee5d,
         type: 3}
       propertyPath: controls.shoot
-      value: 32
+      value: 115
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fda779ac1ec2ba45aca1ad3e1aaee5d, type: 3}
@@ -4419,7 +4419,7 @@ PrefabInstance:
     - target: {fileID: 1266682091939401999, guid: 0e5d914f3440d4e4c9e75cff48279f56,
         type: 3}
       propertyPath: controls.shoot
-      value: 313
+      value: 274
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e5d914f3440d4e4c9e75cff48279f56, type: 3}
