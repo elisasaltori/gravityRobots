@@ -16,9 +16,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject p2Tips;
     public AudioManager audioManager;
 
+    private bool gameStarted;
+
     private void Start()
     {
-
+        gameStarted = false;
         StartCoroutine(Countdown(3));
     }
 
@@ -52,13 +54,15 @@ public class PauseMenu : MonoBehaviour
         startCountDown.gameObject.SetActive(false);
         p1Tips.gameObject.SetActive(false);
         p2Tips.gameObject.SetActive(false);
+        gameStarted = true;
        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))//if Escape key is pressed
+        //if Escape key is pressed + game has already started (cant pause on countdown)
+        if (Input.GetKeyDown(KeyCode.Escape) && gameStarted)
         {
             if (gameIsPaused)
             {
@@ -77,7 +81,11 @@ public class PauseMenu : MonoBehaviour
         confirmationBox.SetActive(false);
         resumeButton.SetActive(true);
         mainMenuButton.SetActive(true);
-        
+
+        //control tips for players
+        p1Tips.gameObject.SetActive(false);
+        p2Tips.gameObject.SetActive(false);
+
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;//resumes the game at normal speed
         gameIsPaused = false;
@@ -86,6 +94,11 @@ public class PauseMenu : MonoBehaviour
     void PauseGame()
     {
         pauseMenuUI.SetActive(true);
+
+        //control tips for players are on during pause menu
+        p1Tips.gameObject.SetActive(true);
+        p2Tips.gameObject.SetActive(true);
+
         Time.timeScale = 0f;//stops the game
         gameIsPaused = true;
     }
