@@ -4,6 +4,8 @@ https://www.youtube.com/watch?v=6OT43pvUyfY */
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class AudioManager : MonoBehaviour
 {
@@ -26,7 +28,11 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("3..2..1..Go");
+        if (SceneManager.GetActiveScene().name.Equals("stage"))
+            Play("3..2..1..Go");
+        else
+            Play("Music");
+  
     }
 
     // Update is called once per frame

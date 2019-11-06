@@ -195,8 +195,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31408903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.15, y: 0, z: 0.2}
-  m_LocalScale: {x: 1.596637, y: 2.724217, z: 1}
+  m_LocalPosition: {x: 12.15, y: -0.149, z: 0.2}
+  m_LocalScale: {x: 1.596637, y: 2.7868738, z: 1}
   m_Children:
   - {fileID: 197969416}
   m_Father: {fileID: 0}
@@ -2588,6 +2588,7 @@ MonoBehaviour:
   startCountDown: {fileID: 1154290226}
   p1Tips: {fileID: 733226021}
   p2Tips: {fileID: 408505446}
+  audioManager: {fileID: 814422454}
 --- !u!1001 &776169178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2704,6 +2705,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1225833654}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &814422454 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3527616296492568148, guid: 5e8b38184ef183f49ab0f1702bab9ad1,
+    type: 3}
+  m_PrefabInstance: {fileID: 536082374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fb0f4f3bac50349b4cbbf14f040af0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &862018931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,8 +3586,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341218542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.75, z: 0}
-  m_LocalScale: {x: 3.4525263, y: 1.4781269, z: 1}
+  m_LocalPosition: {x: -0.246, y: -6.75, z: 0}
+  m_LocalScale: {x: 3.5600724, y: 1.4781269, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -4675,6 +4688,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5079216284774997837, guid: 5fda779ac1ec2ba45aca1ad3e1aaee5d,
+        type: 3}
+      propertyPath: maxVelocity
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5079216284774997836, guid: 5fda779ac1ec2ba45aca1ad3e1aaee5d,
         type: 3}
       propertyPath: controls.shoot
@@ -5099,6 +5117,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266682091939401998, guid: 0e5d914f3440d4e4c9e75cff48279f56,
+        type: 3}
+      propertyPath: maxVelocity
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1266682091939401999, guid: 0e5d914f3440d4e4c9e75cff48279f56,
         type: 3}

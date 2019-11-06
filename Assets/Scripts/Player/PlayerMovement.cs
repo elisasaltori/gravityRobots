@@ -119,7 +119,10 @@ public class PlayerMovement : MonoBehaviour
         //caps player horizontal speed
         if (rb.velocity.x > maxVelocity)
             rb.velocity = new Vector2(maxVelocity, rb.velocity.y);
-       
+
+        if (rb.velocity.x < -maxVelocity)
+            rb.velocity = new Vector2(-maxVelocity, rb.velocity.y);
+
         animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 
         // Flips sprite to match movement

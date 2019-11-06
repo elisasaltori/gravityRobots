@@ -14,10 +14,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject startCountDown;
     public GameObject p1Tips;
     public GameObject p2Tips;
-
+    public AudioManager audioManager;
 
     private void Start()
     {
+
         StartCoroutine(Countdown(3));
     }
 
@@ -44,10 +45,14 @@ public class PauseMenu : MonoBehaviour
         {
         FindObjectsOfType<PlayerMovement>()[i].stunned = false;
         }
+        audioManager.Play("Music");
+
+        yield return new WaitForSeconds(1);
         // Removes the Start countdown and the keys tip from screen
         startCountDown.gameObject.SetActive(false);
         p1Tips.gameObject.SetActive(false);
         p2Tips.gameObject.SetActive(false);
+       
     }
 
     // Update is called once per frame
