@@ -11,6 +11,8 @@ TagManager:
   - parede
   - PointsManager
   - flyingEnemy
+  - gravityRed
+  - gravityYellow
   layers:
   - Default
   - TransparentFX

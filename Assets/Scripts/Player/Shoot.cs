@@ -31,7 +31,6 @@ public class Shoot : MonoBehaviour
     public void Awake()
     {
         animator = GetComponent<Animator>();
-        //dir = gameObject.GetComponent<PlayerMovement>().facingRight;
     }
 
     // Start is called before the first frame update
@@ -46,9 +45,10 @@ public class Shoot : MonoBehaviour
         stunned = gameObject.GetComponent<PlayerMovement>().stunned;
         if (!stunned)
         {
-            //if (Input.GetKeyDown(controls.shoot) && Time.time > nextFire)
-            if (Input.GetKeyDown(controls.shoot) && GameObject.Find((bomb.name) + "(Clone)") == null)
+            if (Input.GetKeyDown(controls.shoot) &&
+                GameObject.FindGameObjectsWithTag((bomb.name)).Length <= 2)
             {
+                
                 animator.SetTrigger("shooting");
                 Shoots();
             }
