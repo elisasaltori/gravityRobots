@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("Music");
+        Play("3..2..1..Go");
     }
 
     // Update is called once per frame
