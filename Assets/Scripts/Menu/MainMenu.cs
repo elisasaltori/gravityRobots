@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public PointsSystem ps;
-    public GameObject enemy;
-    public int sendHim = 0;
+    GameObject enemy;
+    int sendHim = 0;
+    Vector3 originalPosition;
 
     public void Update()
     {
@@ -22,7 +23,7 @@ public class MainMenu : MonoBehaviour
             
             enemy = GameObject.Find("FlyingEnemy");
             Vector3 temp = new Vector3(2.0f, 0, 0);
-            if (enemy.transform.position.x < 1500)
+            if (enemy.transform.position.x < 1700)
             {
                 enemy.transform.position += temp;
             } else
