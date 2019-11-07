@@ -7,28 +7,40 @@ public class MainMenu : MonoBehaviour
 {
     public PointsSystem ps;
     GameObject enemy;
-    int sendHim = 0;
+    bool sendHim = false;
     Vector3 originalPosition;
+
+    public void Start()
+    {
+        enemy = GameObject.Find("FlyingEnemy");
+        originalPosition = enemy.transform.position;
+    }
 
     public void Update()
     {
         // Releases flying monster in this interval
-        if (Time.time > 9 && Time.time < 10)
+        if (Time.time % 10 > 9)
         {
-            sendHim = 1;
+            sendHim = true;
         }
 
-        if(sendHim == 1)
+        if(sendHim)
         {
             
-            enemy = GameObject.Find("FlyingEnemy");
             Vector3 temp = new Vector3(2.0f, 0, 0);
-            if (enemy.transform.position.x < 1700)
+            if (enemy.transform.position.x < 2000)
             {
                 enemy.transform.position += temp;
             } else
             {
-                sendHim = 0;
+                if(Time.time % 30 < 1)
+                {
+                    sendHim = false;
+                    enemy.transform.position = originalPosition;
+                }
+                    
+
+                
             }
         }
         
