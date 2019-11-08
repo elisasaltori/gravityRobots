@@ -5,3 +5,4 @@ Class project for the Universidade de São Paulo (USP), developed in Unity. Grav
 
 Game music by Play On Loop, available on: https://www.playonloop.com/2016-music-loops/spinning-gears/
 Cog by Bluce, available on: https://opengameart.org/content/cog-sheet-2
+Menu music by Greek555: https://freesound.org/people/Greek555/sounds/458407/
