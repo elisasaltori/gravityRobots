@@ -37,7 +37,6 @@ public class PauseMenu : MonoBehaviour
         
         while (count > 0)
         {
-            Debug.Log(count);
             yield return new WaitForSeconds(1);
             count--;
         }

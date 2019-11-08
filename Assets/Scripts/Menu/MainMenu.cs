@@ -49,7 +49,6 @@ public class MainMenu : MonoBehaviour
     /*function activates when PlayButton is pressed*/
     public void PlayGame()
     {
-        Debug.Log("Play game!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//goes to next scene
 
     }
