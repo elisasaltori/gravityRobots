@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/// <summary>
+/// Makes a dictionary serializable so we can save it with unity
+/// </summary>
+/// <typeparam name="TKey"></typeparam>
+/// <typeparam name="TValue"></typeparam>
 [System.Serializable]
 public class SerializableDictionary<TKey, TValue> : SortedDictionary<TKey, TValue>, ISerializationCallbackReceiver
 {

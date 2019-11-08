@@ -69,7 +69,6 @@ public class BulletControl : MonoBehaviour
                 //hit a player, call stun
                 if (playerTag != null && collision.gameObject.CompareTag(playerTag))
                 {
-                    Debug.Log("hit a player!");
 
                     collision.gameObject.GetComponent<PlayerMovement>().Stun();
                 }

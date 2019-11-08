@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Shows points on Win Screen
+/// (unlike the script used during the game, this one does not update the points)
+/// </summary>
 public class PointsWinScreen : MonoBehaviour
 {
 

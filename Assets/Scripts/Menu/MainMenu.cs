@@ -6,12 +6,49 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public PointsSystem ps;
+    GameObject enemy;
+    bool sendHim = false;
+    Vector3 originalPosition;
 
+    public void Start()
+    {
+        enemy = GameObject.Find("FlyingEnemy");
+        originalPosition = enemy.transform.position;
+    }
+
+    public void Update()
+    {
+        // Releases flying monster in this interval
+        if (Time.time % 10 > 9)
+        {
+            sendHim = true;
+        }
+
+        if(sendHim)
+        {
+            
+            Vector3 temp = new Vector3(2.0f, 0, 0);
+            if (enemy.transform.position.x < 2500)
+            {
+                enemy.transform.position += temp;
+            } else
+            {
+                if(Time.time % 30 < 1)
+                {
+                    sendHim = false;
+                    enemy.transform.position = originalPosition;
+                }
+                    
+
+                
+            }
+        }
+        
+    }
 
     /*function activates when PlayButton is pressed*/
     public void PlayGame()
     {
-        Debug.Log("Play game!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//goes to next scene
 
     }

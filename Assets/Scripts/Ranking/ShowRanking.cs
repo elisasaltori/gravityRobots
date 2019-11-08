@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Generates text from ranking object
+/// Displays it on the given TextMesh object
+/// </summary>
 public class ShowRanking : MonoBehaviour
 {
  
