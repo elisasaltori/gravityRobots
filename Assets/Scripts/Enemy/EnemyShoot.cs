@@ -5,9 +5,7 @@ using UnityEngine;
 public class EnemyShoot : MonoBehaviour
 {
     [Header("Attributes")]
-    public int damage = 1;
     public string objectTag;
-    //public string playerTag = null; //always should have the Player tag
 
     void Update()
     {

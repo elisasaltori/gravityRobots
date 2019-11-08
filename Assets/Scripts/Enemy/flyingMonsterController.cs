@@ -38,6 +38,7 @@ public class flyingMonsterController : MonoBehaviour
     }
 
     void setFlipSpriteDirection() {
+        // Caso o monstro voador esteja no meio do campo, ele é rotacionado para atirar no sentido oposto
         if (transform.position.x > 0.56) {
             flipSprite();
         }
@@ -58,27 +59,4 @@ public class flyingMonsterController : MonoBehaviour
         changeDirection();
         
     }
-
-    /*int OnTriggerEnter2D(Collider2D other)
-    {
-    	//Debug.Log("Object that entered the trigger : " + other);
-    	//RubyController controller = other.GetComponent<RubyController>();
-
-    	return (direction * (-1));
-    }*/
-
-    /*void OnCollisionEnter2D(Collision2D other)
-	{
-	    if(other.GetContacts() > 0){
-	    	direction
-	    }
-
-	}*/
-
-    /*int verifyWallHit(Vector2 position)
-    {
-    	if()
-
-    	return new_direction
-    }*/
 }

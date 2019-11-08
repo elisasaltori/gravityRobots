@@ -8,10 +8,10 @@ public class MoveShoot : MonoBehaviour
     public float speed = 10.0f; //shooting speed
     public float spawnDist = 0.05f;
     public float dir = 1;
-    public float shootintRate = 0.75f;
-    public float monsterType = 1;
+    public float shootingRate = 0.75f; // frenquencia de disparo (quanto maior a frequencia, menos disparos por segundo)
+    public float monsterType = 1; // define se o tiro foi disparado pelo monstro roxo ou verde
 
-    private float shootCooldown;
+    private float shootCooldown; // controla a frequencia de disparos do mosntro
     private Animator animator;
 
 
@@ -24,7 +24,6 @@ public class MoveShoot : MonoBehaviour
     public void Awake()
     {
         animator = GetComponent<Animator>();
-        //dir = gameObject.GetComponent<PlayerMovement>().facingRight;
     }
 
     // Start is called before the first frame update
@@ -40,7 +39,6 @@ public class MoveShoot : MonoBehaviour
 		{
 			shootCooldown -= Time.deltaTime;
 		}
-        //animator.SetTrigger("shooting");
         
         Shoots();
     }
@@ -50,8 +48,8 @@ public class MoveShoot : MonoBehaviour
     	if (shootCooldown <= 0)
 		{
             animator.SetTrigger("shooting");
-            shootCooldown = shootintRate;
-			Debug.Log(gameObject.GetType());
+            shootCooldown = shootingRate;
+            // direcionamento do tiro para sempre sair pela frente do monstro (verificando o sentido do mosntro)
 			if (monsterType == 1)
 		    {
 	        	facing = gameObject.GetComponent<MonstroSimplesController>().facingRight;
@@ -70,11 +68,11 @@ public class MoveShoot : MonoBehaviour
 
             FindObjectOfType<AudioManager>().Play("MonsterShoot");
 
+            // instanciamento do tiro na tela após o disparo do monstro
             GameObject bullet = Instantiate(bomb);
 	        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), bullet.GetComponent<Collider2D>());
 	        bullet.transform.position = (this.transform.position + transform.right * (dir *spawnDist));
 	        bullet.GetComponent<Rigidbody2D>().velocity = dir * (speed * transform.right);
-	        //Debug.Log("Atirou!"); 
 		}
     }
 }
