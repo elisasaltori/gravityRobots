@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Gets points from PointsSystem and shows it on GUI
+/// <summary>
+/// Gets points from PointsSystem and shows it on GUI
+/// Updates points every loop
+/// </summary>
 public class PointsGUI : MonoBehaviour
 {
 

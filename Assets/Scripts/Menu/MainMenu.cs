@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour
         {
             
             Vector3 temp = new Vector3(2.0f, 0, 0);
-            if (enemy.transform.position.x < 2000)
+            if (enemy.transform.position.x < 2500)
             {
                 enemy.transform.position += temp;
             } else

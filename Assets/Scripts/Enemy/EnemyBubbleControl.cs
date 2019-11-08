@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Makes a monster be caught in a bubble when hit by players attack
+/// Adds points to the correct player, instantiates "bubble" and destroys itself
+/// </summary>
 public class EnemyBubbleControl : MonoBehaviour
 {
 
